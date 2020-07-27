@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8"/>
+    <title>HTML Academy: PINK - Фотографии</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__logo logo" href="index.html">
+        <h1 class="visually-hidden">PINK - приложение для смартфона</h1>
+        <img class="logo__img" src="https://via.placeholder.com/74x23" width="74" height="23" alt="Логотип">
+      </a>
+      <nav class="header__nav nav">
+        <ul class="nav-list">
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="index.html">Главная</a>
+          </li>
+          <li class="nav-list__item active">
+            <a class="nav-list__link">Фотографии</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="form.html">Конкурс</a>
+          </li>
+          <li class="nav-list__item">
+            <a class="nav-list__link" href="https://htmlacademy.ru/">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="header__menu mobile-menu">
+        <span class="visually-hidden">Показать навигационное меню</span>
+      </button>
+      <div class="header-section-wrap">
+        <section class="hold-phone">
+          <h2 class="hold-phone__title">Фотографии пользователей</h2>
+        </section>
+      </div>
+    </header>
+    <main class="main">
+      <section class="photo-section">
+        <h3 class="visually-hidden">Фотографии пользователей</h3>
+        <p class="photo-section__text">Взгляните на фотографии, которые выкладывают пользователи! Видите как не хватает ваших?</p>
+        <ul class="photo-section__list photo-list">
+          <li class="photo-list__item photo-list__item--panorama">
+            <article class="photo-item">
+              <div class="photo-item__image-wrap" data-notice="Панорама дня">
+                <img class="photo-item__img" src="https://via.placeholder.com/320x137" width="320" height="137" alt="Мост над пропастью">
+              </div>
+              <div class="photo-item__content photo-content">
+                <h4 class="photo-content__title">Анна
+                  <small class="photo-content__notice">(5 минут назад)</small>
+                </h4>
+                <p class="photo-content__text">Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+                <b class="photo-content__likes">Нравится: 215</b>
+              </div>
+            </article>
+          </li>
+          <li class="photo-list__item">
+            <article class="photo-item">
+              <div class="photo-item__image-wrap">
+                <img class="photo-item__img" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Белая машина">
+              </div>
+              <div class="photo-item__content photo-content">
+                <h4 class="photo-content__title">Левон
+                  <small class="photo-content__notice">(5 часов назад)</small>
+                </h4>
+                <p class="photo-content__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+                <b class="photo-content__likes">Нравится: 356</b>
+              </div>
+            </article>
+          </li>
+          <li class="photo-list__item">
+            <article class="photo-item">
+              <div class="photo-item__image-wrap">
+                <img class="photo-item__img" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Вид на небоскрёб">
+              </div>
+              <div class="photo-item__content photo-content">
+                <h4 class="photo-content__title">Борис
+                  <small class="photo-content__notice">(20 часов назад)</small>
+                </h4>
+                <p class="photo-content__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+                <b class="photo-content__likes">Нравится: 215</b>
+              </div>
+            </article>
+          </li>
+          <li class="photo-list__item">
+            <article class="photo-item">
+              <div class="photo-item__image-wrap">
+                <img class="photo-item__img" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Базар">
+              </div>
+              <div class="photo-item__content photo-content">
+                <h4 class="photo-content__title">Сергей
+                  <small class="photo-content__notice">(25 часов назад)</small>
+                </h4>
+                <p class="photo-content__text">Самая кубанская в мире!</p>
+                <b class="photo-content__likes">Нравится: 4</b>
+              </div>
+            </article>
+          </li>
+          <li class="photo-list__item">
+            <article class="photo-item">
+              <div class="photo-item__image-wrap">
+                <img class="photo-item__img" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Горы">
+              </div>
+              <div class="photo-item__content photo-content">
+                <h4 class="photo-content__title">Максим
+                  <small class="photo-content__notice">(40 часов назад)</small>
+                </h4>
+                <p class="photo-content__text">Где снег-то?</p>
+                <b class="photo-content__likes">Нравится: 150</b>
+              </div>
+            </article>
+          </li>
+          <li class="photo-list__item">
+            <article class="photo-item">
+              <div class="photo-item__image-wrap">
+                <img class="photo-item__img" src="https://via.placeholder.com/280x180" width="280" height="180" alt="Самолёт">
+              </div>
+              <div class="photo-item__content photo-content">
+                <h4 class="photo-content__title">Надежда
+                  <small class="photo-content__notice">(45 часов назад)</small>
+                </h4>
+                <p class="photo-content__text">Всем GM и взаимные лайки!</p>
+                <b class="photo-content__likes">Нравится: 2560</b>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <a class="footer__logo logo" href="index.html">
+        <h6 class="visually-hidden">PINK - приложение для смартфона</h6>
+        <img class="logo__img" src="https://via.placeholder.com/145x40" width="145" height="40" alt="Логотип">
+      </a>
+      <section class="footer-social-wrap">
+        <h2 class="visually-hidden">Мы в социальных сетях</h2>
+        <ul class="footer-social-list">
+          <li class="footer-social-list__item">
+            <a class="footer-social-list__link footer-social-list__link--icon-1" href="https://twitter.com/" aria-label="Мы в Twitter" title="Twitter"></a>
+          </li>
+          <li class="footer-social-list__item">
+            <a class="footer-social-list__link footer-social-list__link--icon-2" href="https://facebook.com/" aria-label="Мы в Facebook" title="Facebook"></a>
+          </li>
+          <li class="footer-social-list__item">
+            <a class="footer-social-list__link footer-social-list__link--icon-3" href="https://youtube.com/" aria-label="Мы в Youtube" title="Youtube"></a>
+          </li>
+        </ul>
+      </section>
+      <div class="powered-by">
+        <small class="powered-by__text">Разработано</small>
+        <a class="powered-by__link" href="https://htmlacademy.ru/">
+          <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="HTML академия">
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
