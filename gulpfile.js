@@ -4,7 +4,21 @@ const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const pug = require("gulp-pug");
 const sync = require("browser-sync").create();
+
+// PUG
+
+const htmlPUG = () => {
+  return gulp.src("pug/pages/*.pug")
+    .pipe(pug({
+      pretty: true
+    }))
+    .pipe(gulp.dest("source/"))
+    .pipe(sync.stream());
+};
+
+exports.htmlPUG = htmlPUG;
 
 // Styles
 
@@ -19,7 +33,7 @@ const styles = () => {
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
-}
+};
 
 exports.styles = styles;
 
@@ -35,17 +49,18 @@ const server = (done) => {
     ui: false,
   });
   done();
-}
+};
 
 exports.server = server;
 
 // Watcher
 
 const watcher = () => {
+  gulp.watch("pug/**/*.pug", gulp.series("htmlPUG"));
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html").on("change", sync.reload);
-}
+};
 
 exports.default = gulp.series(
-  styles, server, watcher
+  htmlPUG, styles, server, watcher
 );
