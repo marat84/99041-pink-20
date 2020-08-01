@@ -1,0 +1,32 @@
+.photo-item__image-wrap {
+  position: relative;
+  display: block;
+  line-height: 0;
+
+  &--panorama {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  &[data-notice] {
+    &::after {
+      content: attr(data-notice);
+      position: absolute;
+      right: 20px;
+      top: 0;
+      background-color: var(--basic-red);
+      color: var(--basic-white);
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: rem(12);
+      line-height: em(24, 12);
+
+      padding: 6.5px 19.5px;
+    }
+  }
+}
+
+.photo-item__content {
+  background-color: var(--basic-gray-lighter);
+  color: var(--basic-black);
+}

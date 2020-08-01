@@ -1,0 +1,10 @@
+.photo-list {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.photo-list__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}

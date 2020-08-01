@@ -1,1 +1,17 @@
-// Начните писать стили здесь
+@import "helpers/variables";
+@import "helpers/functions";
+@import "blocks/page";
+@import "blocks/header";
+@import "blocks/nav";
+@import "blocks/header-section-wrap";
+@import "blocks/hold-phone";
+@import "blocks/download-app";
+@import "blocks/main";
+@import "blocks/offer-section";
+@import "blocks/footer";
+@import "blocks/footer-social-list";
+@import "blocks/powered-by";
+@import "blocks/photo-section";
+@import "blocks/photo-list";
+@import "blocks/photo-item";
+@import "blocks/photo-content";

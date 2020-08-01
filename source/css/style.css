@@ -1,0 +1,332 @@
+@charset "UTF-8";
+:root {
+  --base-fz: 14px;
+  --font-family: opensans, "Arial", "Helvetica Neue", "sans-serif";
+  --basic-color: #283645;
+  --basic-color-rgb: 40, 54, 69;
+  --basic-white: #ffffff;
+  --basic-white-rgb: 255, 255, 255;
+  --basic-gray: #283645;
+  --basic-gray-rgb: 40, 54, 69;
+  --basic-red: #d22856;
+  --basic-red-rgb: 210, 40, 86;
+  --basic-gray-light: #e5e5e5;
+  --basic-gray-light-rgb: 229, 229, 229;
+  --basic-green: #3dc644;
+  --basic-green-rgb: 61, 198, 68;
+  --basic-black: #000000;
+  --basic-black-rgb: 0, 0, 0;
+  --basic-gray-lighter: #f2f2f2;
+  --basic-gray-lighter-rgb: 242, 242, 242;
+  --basic-gray-dark: #252527;
+  --basic-gray-dark-rgb: 37, 37, 39;
+  --basic-orange: #f25b26;
+  --basic-orange-rgb: 242, 91, 38;
+  --basic-blue: #2dabe2;
+  --basic-blue-rgb: 45, 171, 226;
+  --basic-lime: #84c441;
+  --basic-lime-rgb: 132, 196, 65;
+  --basic-green-light: #a4c639;
+  --basic-green-light-rgb: 164, 198, 57;
+  --basic-red-light: #f05423;
+  --basic-red-light-rgb: 240, 84, 35;
+  --basic-yellow: #f9bc15;
+  --basic-yellow-rgb: 249, 188, 21;
+  --basic-gray-light-2: #dedede;
+  --basic-gray-light-2-rgb: 222, 222, 222;
+  --basic-gray-dark-2: #1d2631;
+  --basic-gray-dark-2-rgb: 29, 38, 49;
+  --basic-gray-light-3: #efefef;
+  --basic-gray-light-3-rgb: 239, 239, 239;
+  --basic-hover-red: #d22856;
+  --basic-hover-red-rgb: 210, 40, 86;
+  --basic-green-btn-hover: #1c9b5e;
+  --basic-green-btn-hover-rgb: 28, 155, 94;
+  --basic-green-btn: #2aab6d;
+  --basic-green-btn-rgb: 42, 171, 109; }
+
+/* Конвертирует px в rem. Основная единица rem */
+/* Конвертирует px в em. Основная единица em */
+@font-face {
+  font-family: "opensans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff"); }
+
+@font-face {
+  font-family: "opensans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff"); }
+
+@font-face {
+  font-family: "opensans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff"); }
+
+html {
+  font-size: var(--base-fz);
+  height: 100%; }
+
+body {
+  min-height: 100%;
+  color: var(--basic-color);
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.71429em;
+  font-family: var(--font-family); }
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box; }
+
+a {
+  color: var(--basic-black);
+  text-decoration: none;
+  transition: all 150ms; }
+  a[href]:hover {
+    color: var(--basic-red);
+    text-decoration: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 20px; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 15px; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+.header {
+  background-color: var(--basic-color);
+  color: var(--basic-white); }
+
+.nav-list__link {
+  font-weight: bold;
+  font-size: 1.28571rem;
+  line-height: 1.77778em;
+  color: var(--basic-white); }
+
+.header-section-wrap {
+  color: var(--basic-white);
+  background-color: var(--basic-color); }
+
+.hold-phone {
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 23%;
+  background-size: cover;
+  padding-top: 29px;
+  min-height: 171px; }
+  .hold-phone--bg-position {
+    background-position: 0 100%; }
+
+.hold-phone__title {
+  font-size: 1.71429rem;
+  line-height: 1.375em;
+  font-weight: 300;
+  text-align: center;
+  color: currentColor;
+  padding: 0 30px;
+  margin-bottom: 34px; }
+  .hold-phone__title--line-height {
+    line-height: 120%; }
+
+.hold-phone__wrap {
+  display: block; }
+  .hold-phone__wrap > img {
+    display: block; }
+
+.download-app {
+  padding: 28px 20px 38px;
+  text-align: center; }
+
+.download-app__btn {
+  color: var(--basic-white); }
+
+.download-app__list {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 28px; }
+
+.download-app__item:not(:last-child) {
+  margin-right: 35px; }
+
+.download-app__link {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: 0 0; }
+  .download-app__link--icon-1 {
+    width: 47px;
+    height: 57px;
+    background-image: url("../img/logo-apple.svg"); }
+  .download-app__link--icon-2 {
+    width: 43px;
+    height: 47px;
+    background-image: url("../img/logo-android.svg"); }
+  .download-app__link--icon-3 {
+    width: 44px;
+    height: 41px;
+    background-image: url("../img/logo-microsoft.svg"); }
+
+.download-app__text {
+  margin-bottom: 0; }
+
+.main {
+  padding-top: 46px; }
+
+.offer-section {
+  text-align: center; }
+
+.offer-section__text,
+.offer-section__title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.71429rem;
+  line-height: 120%; }
+
+.footer {
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+.footer-social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.footer-social-list__item:not(:last-child) {
+  margin-right: 14px; }
+
+.footer-social-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 0 0 3px rgba(var(--basic-color-rgb), 0.1); }
+  .footer-social-list__link--icon-3 > svg {
+    transform: translateX(2px); }
+
+.powered-by {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.powered-by__text {
+  color: var(--basic-color);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.28571em; }
+
+.powered-by__link {
+  line-height: 0;
+  display: block;
+  margin-left: 15px; }
+
+.photo-section__text {
+  text-align: center;
+  line-height: 1.71429em; }
+
+.photo-list {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.photo-list__item:not(:last-child) {
+  margin-bottom: 20px; }
+
+.photo-item__image-wrap {
+  position: relative;
+  display: block;
+  line-height: 0; }
+  .photo-item__image-wrap--panorama {
+    margin-left: -20px;
+    margin-right: -20px; }
+  .photo-item__image-wrap[data-notice]::after {
+    content: attr(data-notice);
+    position: absolute;
+    right: 20px;
+    top: 0;
+    background-color: var(--basic-red);
+    color: var(--basic-white);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.85714rem;
+    line-height: 2em;
+    padding: 6.5px 19.5px; }
+
+.photo-item__content {
+  background-color: var(--basic-gray-lighter);
+  color: var(--basic-black); }
+
+.photo-content {
+  color: var(--basic-color); }
+
+.photo-content__title {
+  line-height: 1.71429em;
+  font-weight: 700; }
+
+.photo-content__likes,
+.photo-content__notice {
+  font-weight: 300;
+  font-size: 0.85714rem;
+  line-height: 2em;
+  text-transform: uppercase; }
+
+.photo-content__likes {
+  position: relative;
+  font-weight: 400;
+  color: var(--basic-red);
+  padding-left: 31px; }
+  .photo-content__likes::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -6px;
+    width: 13px;
+    height: 12px;
+    background-image: url('data:image/svg+xml,%3Csvg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="521.939 473.064 12.545 11.99" fill="%23d22856"%3E%3Cpath d="M528.174 485.055a.737.737 0 01-.552-.249c-3.798-4.324-4.644-5.298-4.858-5.572h-.004a3.866 3.866 0 01-.821-2.373 3.803 3.803 0 013.799-3.799c.934 0 1.804.32 2.484.898a3.847 3.847 0 012.463-.898 3.803 3.803 0 013.799 3.799c0 .909-.318 1.754-.896 2.381l-4.86 5.561a.735.735 0 01-.554.252zm-4.245-6.706c.208.255 2.471 2.839 4.243 4.858l4.323-4.944c.34-.369.52-.86.52-1.399a2.333 2.333 0 00-2.33-2.331c-.729 0-1.421.344-1.9.943a.76.76 0 01-.585.275.727.727 0 01-.575-.294 2.333 2.333 0 00-1.887-.925 2.333 2.333 0 00-2.33 2.331c0 .678.275 1.171.507 1.467l.014.019z"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-position: 0 0; }
+
+/*# sourceMappingURL=style.css.map */

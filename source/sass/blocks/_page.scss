@@ -1,0 +1,89 @@
+@each $font, $textWeight, $weight in ($font, "light", 300), ($font, "", 400), ($font, "bold", 700) {
+  @font-face {
+    font-family: $font;
+    font-style: normal;
+    font-weight: $weight;
+    font-display: swap;
+    src: url("../fonts/#{$font}#{$textWeight}.woff2") format("woff2"), url("../fonts/#{$font}#{$textWeight}.woff") format("woff");
+  }
+}
+
+html {
+  font-size: var(--base-fz);
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  color: var(--basic-color);
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: em(24);
+  font-family: var(--font-family);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--basic-black);
+  text-decoration: none;
+  transition: all 150ms;
+
+  &[href]:hover {
+    color: var(--basic-red);
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: {
+    top: 0;
+    bottom: 20px;
+  }
+}
+
+p {
+  margin: {
+    top: 0;
+    bottom: 15px;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+

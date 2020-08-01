@@ -1,0 +1,9 @@
+/* Конвертирует px в rem. Основная единица rem */
+@function rem ($size) {
+  @return #{$size / $base-fz + rem};
+}
+
+/* Конвертирует px в em. Основная единица em */
+@function em ($size, $em: $base-fz) {
+  @return #{$size / $em + em};
+}
