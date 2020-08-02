@@ -10,11 +10,12 @@
 
   &[data-notice] {
     &::after {
-      font-size: 12px;
       content: attr(data-notice);
       position: absolute;
       right: 20px;
       top: 0;
+      font-size: 12px;
+      line-height: 24px;
       background-color: var(--basic-red);
       color: var(--basic-white);
       text-transform: uppercase;
