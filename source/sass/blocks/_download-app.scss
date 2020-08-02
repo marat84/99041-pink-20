@@ -25,19 +25,19 @@
   background-repeat: no-repeat;
   background-position: 0 0;
 
-  &--icon-1 {
+  &--apple-icon {
     width: 47px;
     height: 57px;
     background-image: url("../img/logo-apple.svg");
   }
 
-  &--icon-2 {
+  &--google-play-icon {
     width: 43px;
     height: 47px;
     background-image: url("../img/logo-android.svg");
   }
 
-  &--icon-3 {
+  &--microsoft-icon {
     width: 44px;
     height: 41px;
     background-image: url("../img/logo-microsoft.svg");
