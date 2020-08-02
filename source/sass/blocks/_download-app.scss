@@ -1,0 +1,49 @@
+.download-app {
+  padding: 28px 20px 38px;
+  text-align: center;
+}
+
+.download-app__btn {
+  color: var(--basic-white);
+}
+
+.download-app__list {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.download-app__item {
+  &:not(:last-child) {
+    margin-right: 35px;
+  }
+}
+
+.download-app__link {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  &--apple-icon {
+    width: 47px;
+    height: 57px;
+    background-image: url("../img/logo-apple.svg");
+  }
+
+  &--google-play-icon {
+    width: 43px;
+    height: 47px;
+    background-image: url("../img/logo-android.svg");
+  }
+
+  &--microsoft-icon {
+    width: 44px;
+    height: 41px;
+    background-image: url("../img/logo-microsoft.svg");
+  }
+}
+
+.download-app__text {
+  margin-bottom: 0;
+}

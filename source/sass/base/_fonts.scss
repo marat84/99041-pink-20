@@ -1,0 +1,23 @@
+@font-face {
+  font-family: $font;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/#{$font}light.woff2") format("woff2"), url("../fonts/#{$font}light.woff") format("woff");
+}
+
+@font-face {
+  font-family: $font;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/#{$font}.woff2") format("woff2"), url("../fonts/#{$font}.woff") format("woff");
+}
+
+@font-face {
+  font-family: $font;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/#{$font}bold.woff2") format("woff2"), url("../fonts/#{$font}bold.woff") format("woff");
+}

@@ -1,0 +1,56 @@
+// SCSS переменные
+$base-fz: 14;
+$font: "opensans";
+
+$desktop-view: 1200px;
+$tablet-view: 660px;
+$mobile-view: 320px;
+
+// CSS переменные
+:root {
+  --base-fz: #{$base-fz + px};
+  --font-family: #{$font}, "Arial", "Helvetica Neue", "sans-serif";
+
+  --basic-color: #283645;
+  --basic-color-rgb: 40, 54, 69;
+  --basic-white: #ffffff;
+  --basic-white-rgb: 255, 255, 255;
+  --basic-gray: #283645;
+  --basic-gray-rgb: 40, 54, 69;
+  --basic-red: #d22856;
+  --basic-red-rgb: 210, 40, 86;
+  --basic-gray-light: #e5e5e5;
+  --basic-gray-light-rgb: 229, 229, 229;
+  --basic-green: #3dc644;
+  --basic-green-rgb: 61, 198, 68;
+  --basic-black: #000000;
+  --basic-black-rgb: 0, 0, 0;
+  --basic-gray-lighter: #f2f2f2;
+  --basic-gray-lighter-rgb: 242, 242, 242;
+  --basic-gray-dark: #252527;
+  --basic-gray-dark-rgb: 37, 37, 39;
+  --basic-orange: #f25b26;
+  --basic-orange-rgb: 242, 91, 38;
+  --basic-blue: #2dabe2;
+  --basic-blue-rgb: 45, 171, 226;
+  --basic-lime: #84c441;
+  --basic-lime-rgb: 132, 196, 65;
+  --basic-green-light: #a4c639;
+  --basic-green-light-rgb: 164, 198, 57;
+  --basic-red-light: #f05423;
+  --basic-red-light-rgb: 240, 84, 35;
+  --basic-yellow: #f9bc15;
+  --basic-yellow-rgb: 249, 188, 21;
+  --basic-gray-light-2: #dedede;
+  --basic-gray-light-2-rgb: 222, 222, 222;
+  --basic-gray-dark-2: #1d2631;
+  --basic-gray-dark-2-rgb: 29, 38, 49;
+  --basic-gray-light-3: #efefef;
+  --basic-gray-light-3-rgb: 239, 239, 239;
+  --basic-hover-red: #d22856;
+  --basic-hover-red-rgb: 210, 40, 86;
+  --basic-green-btn-hover: #1c9b5e;
+  --basic-green-btn-hover-rgb: 28, 155, 94;
+  --basic-green-btn: #2aab6d;
+  --basic-green-btn-rgb: 42, 171, 109;
+}

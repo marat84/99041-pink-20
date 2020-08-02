@@ -1,0 +1,19 @@
+.powered-by {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.powered-by__text {
+  color: var(--basic-color);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 18px;
+}
+
+.powered-by__link {
+  line-height: 0;
+  display: block;
+  margin-left: 15px;
+}
