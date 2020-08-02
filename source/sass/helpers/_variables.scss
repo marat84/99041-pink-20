@@ -2,9 +2,12 @@
 $base-fz: 14;
 $font: "opensans";
 
+$desktop-view: 1200px;
+$tablet-view: 660px;
+$mobile-view: 320px;
+
 // CSS переменные
 :root {
-
   --base-fz: #{$base-fz + px};
   --font-family: #{$font}, "Arial", "Helvetica Neue", "sans-serif";
 

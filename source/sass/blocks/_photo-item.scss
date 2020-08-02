@@ -10,6 +10,7 @@
 
   &[data-notice] {
     &::after {
+      font-size: 12px;
       content: attr(data-notice);
       position: absolute;
       right: 20px;
@@ -18,8 +19,6 @@
       color: var(--basic-white);
       text-transform: uppercase;
       font-weight: bold;
-      font-size: rem(12);
-      line-height: em(24, 12);
 
       padding: 6.5px 19.5px;
     }

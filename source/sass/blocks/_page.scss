@@ -1,11 +1,25 @@
-@each $font, $textWeight, $weight in ($font, "light", 300), ($font, "", 400), ($font, "bold", 700) {
-  @font-face {
-    font-family: $font;
-    font-style: normal;
-    font-weight: $weight;
-    font-display: swap;
-    src: url("../fonts/#{$font}#{$textWeight}.woff2") format("woff2"), url("../fonts/#{$font}#{$textWeight}.woff") format("woff");
-  }
+@font-face {
+  font-family: $font;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/#{$font}light.woff2") format("woff2"), url("../fonts/#{$font}light.woff") format("woff");
+}
+
+@font-face {
+  font-family: $font;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/#{$font}.woff2") format("woff2"), url("../fonts/#{$font}.woff") format("woff");
+}
+
+@font-face {
+  font-family: $font;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/#{$font}bold.woff2") format("woff2"), url("../fonts/#{$font}bold.woff") format("woff");
 }
 
 html {
@@ -19,7 +33,7 @@ body {
   margin: 0;
   font-size: 1rem;
   font-weight: 400;
-  line-height: em(24);
+  line-height: 24px;
   font-family: var(--font-family);
 }
 
@@ -86,4 +100,3 @@ img {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-
