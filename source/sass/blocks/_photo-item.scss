@@ -39,6 +39,10 @@
       @media (min-width: $tablet-view) {
         top: 57px;
       }
+
+      @media (min-width: $desktop-view) {
+        right: var(--container-gap);
+      }
     }
   }
 }
