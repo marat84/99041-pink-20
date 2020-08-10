@@ -6,15 +6,17 @@
   align-items: center;
   justify-content: center;
 
-  @media (max-width: $tablet-view) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
   @media (min-width: $tablet-view) {
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: $desktop-view) {
+    padding-left: var(--container-gap);
+    padding-right: var(--container-gap);
   }
 }
 

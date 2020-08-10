@@ -1,10 +1,33 @@
 .photo-list {
+  display: grid;
+  grid-template-columns: 1fr;
   padding-left: 20px;
   padding-right: 20px;
+  grid-gap: 20px;
+
+  @media (min-width: $tablet-view) {
+    grid-template-columns: 1fr 1fr;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (min-width: $desktop-view) {
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .photo-list__item {
-  &:not(:last-child) {
-    margin-bottom: 20px;
+  @media (min-width: $tablet-view) {
+    &:first-child {
+      grid-column-start: span 2;
+    }
+  }
+
+  @media (min-width: $desktop-view) {
+    &:first-child {
+      grid-column-start: span 3;
+    }
   }
 }

@@ -7,15 +7,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    min-height: 580px;
+    min-height: 619px;
     padding-right: 320px;
     padding-top: 0;
+    margin-left: -10px;
+    margin-right: -10px;
+
+    &--inner-page {
+      min-height: 330px;
+      padding-right: 0;
+    }
   }
 
   @media (min-width: $desktop-view) {
     position: relative;
     min-height: 743px;
     padding-right: 600px;
+
+    &--inner-page {
+      padding-right: 0;
+      min-height: 284px;
+      align-items: center;
+    }
   }
 }
 
@@ -28,16 +41,32 @@
   padding: 0 30px;
   margin-bottom: 29px;
 
-  &--line-height {
-    line-height: 120%;
+  @media (min-width: $tablet-view) {
+    font-size: 50px;
+    line-height: 68px;
+    margin-bottom: 40px;
   }
 
-  @media (min-width: $tablet-view) {
-    position: relative;
-    z-index: 2;
-    font-size: 40px;
-    padding-left: 50px;
-    padding-right: 50px;
+  @media (min-width: $desktop-view) {
+    padding-left: 100px;
+    padding-right: 100px;
+
+    &--photo-page {
+      padding-left: 200px;
+      padding-right: 200px;
+    }
+  }
+
+  &--main-page {
+    line-height: 120%;
+
+    @media (min-width: $tablet-view) {
+      position: relative;
+      z-index: 2;
+      font-size: 40px;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
   }
 }
 
