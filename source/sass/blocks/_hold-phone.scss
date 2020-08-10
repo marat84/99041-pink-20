@@ -1,13 +1,21 @@
 .hold-phone {
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 23%;
-  background-size: cover;
-  padding-top: 29px;
-  min-height: 171px;
+  padding-top: 36px;
+  min-height: 170px;
 
-  &--bg-position {
-    background-position: 0 100%;
+  @media (min-width: $tablet-view) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 580px;
+    padding-right: 320px;
+    padding-top: 0;
+  }
+
+  @media (min-width: $desktop-view) {
+    position: relative;
+    min-height: 743px;
+    padding-right: 600px;
   }
 }
 
@@ -18,17 +26,39 @@
   text-align: center;
   color: currentColor;
   padding: 0 30px;
-  margin-bottom: 34px;
+  margin-bottom: 29px;
 
   &--line-height {
     line-height: 120%;
   }
+
+  @media (min-width: $tablet-view) {
+    position: relative;
+    z-index: 2;
+    font-size: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
-.hold-phone__wrap {
+.hold-phone__img {
   display: block;
 
-  & > img {
-    display: block;
+  @media (min-width: $tablet-view) {
+    width: 700px;
+    height: 545px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  @media (min-width: $desktop-view) {
+    width: 1050px;
+    height: 645px;
+    left: auto;
+    right: -100px;
+    transform: translateX(0);
   }
 }

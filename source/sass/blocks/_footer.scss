@@ -1,7 +1,27 @@
 .footer {
-  padding: 40px 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: $tablet-view) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: $tablet-view) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.footer__logo {
+  margin-bottom: 34px;
+
+  @media (min-width: $tablet-view) {
+    margin-bottom: 0;
+  }
 }

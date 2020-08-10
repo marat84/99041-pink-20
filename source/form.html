@@ -11,7 +11,11 @@
     <header class="header">
       <a class="header__logo logo" href="index.html">
         <h1 class="visually-hidden">PINK - приложение для смартфона</h1>
-        <img class="logo__img" src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип">
+        <picture>
+          <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)">
+          <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
+          <img class="logo__img" src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип">
+        </picture>
       </a>
       <nav class="header__nav nav">
         <ul class="nav-list">
@@ -32,7 +36,7 @@
       <button class="header__menu mobile-menu">
         <span class="visually-hidden">Показать навигационное меню</span>
       </button>
-      <div class="header-section-wrap">
+      <div class="header-section-wrap container">
         <section class="hold-phone">
           <h2 class="hold-phone__title">Конкурс на самое безбашенное путешествие с Пинк</h2>
         </section>
@@ -40,10 +44,13 @@
     </header>
     <main class="main">
     </main>
-    <footer class="footer">
+    <footer class="footer container">
       <a class="footer__logo logo" href="index.html">
         <h6 class="visually-hidden">PINK - приложение для смартфона</h6>
-        <img class="logo__img" src="img/logo-pink-blue-mobile.svg" width="145" height="40" alt="Логотип">
+        <picture>
+          <source srcset="img/logo-pink-blue-desktop.svg" media="(min-width: 1200px)">
+          <img class="logo__img logo__img--footer" src="img/logo-pink-blue-mobile.svg" width="145" height="40" alt="Логотип">
+        </picture>
       </a>
       <section class="footer-social-wrap">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>

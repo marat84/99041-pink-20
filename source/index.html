@@ -11,7 +11,11 @@
     <header class="header">
       <a class="header__logo logo">
         <h1 class="visually-hidden">PINK - приложение для смартфона</h1>
-        <img class="logo__img" src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип">
+        <picture>
+          <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)">
+          <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
+          <img class="logo__img" src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип">
+        </picture>
       </a>
       <nav class="header__nav nav">
         <ul class="nav-list">
@@ -32,31 +36,31 @@
       <button class="header__menu mobile-menu">
         <span class="visually-hidden">Показать навигационное меню</span>
       </button>
-      <div class="header-section-wrap">
-        <section class="hold-phone hold-phone--bg-position">
+      <div class="header-section-wrap container header-section-wrap--bg-position">
+        <section class="hold-phone">
           <h2 class="hold-phone__title hold-phone__title--line-height">Взгляните на жизнь иначе!</h2>
-          <picture class="hold-phone__wrap">
+          <picture>
             <source srcset="img/iphone-hand-desktop@1x.png" media="(min-width: 1200px)">
             <source srcset="img/iphone-hand-tablet@1x.png" media="(min-width: 660px)">
-            <img src="img/iphone-hand-mobile@1x.png" alt="Музей в розовом свете">
+            <img class="hold-phone__img" src="img/iphone-hand-mobile@1x.png" alt="Музей в розовом свете" width="258" height="286">
           </picture>
-        </section>
-        <section class="download-app">
-          <a class="download-app__btn" href="https://play.google.com/store?hl=ru">
-            <h3 class="download-app__title">Скачать приложение</h3>
-          </a>
-          <ul class="download-app__list">
-            <li class="download-app__item">
-              <a class="download-app__link download-app__link--apple-icon" href="https://www.apple.com/ru/ios/app-store/" aria-label="Скачать приложение в App Store"></a>
-            </li>
-            <li class="download-app__item">
-              <a class="download-app__link download-app__link--google-play-icon" href="https://play.google.com/store?hl=ru" aria-label="Скачать приложение в Google Play"></a>
-            </li>
-            <li class="download-app__item">
-              <a class="download-app__link download-app__link--microsoft-icon" href="https://www.microsoft.com/ru-RU/store/apps" aria-label="Скачать приложение в Microsoft Store"></a>
-            </li>
-          </ul>
-          <p class="download-app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          <div class="download-app">
+            <a class="download-app__btn" href="https://play.google.com/store?hl=ru">
+              <h3 class="download-app__title">Скачать приложение</h3>
+            </a>
+            <ul class="download-app__list">
+              <li class="download-app__item">
+                <a class="download-app__link download-app__link--apple-icon" href="https://www.apple.com/ru/ios/app-store/" aria-label="Скачать приложение в App Store"></a>
+              </li>
+              <li class="download-app__item">
+                <a class="download-app__link download-app__link--google-play-icon" href="https://play.google.com/store?hl=ru" aria-label="Скачать приложение в Google Play"></a>
+              </li>
+              <li class="download-app__item">
+                <a class="download-app__link download-app__link--microsoft-icon" href="https://www.microsoft.com/ru-RU/store/apps" aria-label="Скачать приложение в Microsoft Store"></a>
+              </li>
+            </ul>
+            <p class="download-app__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+          </div>
         </section>
       </div>
     </header>
@@ -64,52 +68,52 @@
       <section class="offer-section">
         <h2 class="offer-section__title">Устали от серости мегаполиса?</h2>
         <p class="offer-section__text">Нам есть, что вам предложить!</p>
-        <ul class="offer-section__list">
-          <li class="offer-section__item">
-            <section class="offer-item">
-              <div class="offer-item__content">
-                <h3 class="offer-item__title">Поднимает настроение</h3>
-                <p class="offer-item__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-              </div>
-              <picture class="offer-item__image-wrap">
-                <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== 1w" sizes="1px" media="(max-width: 1200px)">
-                <img src="img/iphone-screen-1-desktop@1x.png" alt="Мусорные баки">
-              </picture>
+        <div class="offer-section__wrap">
+          <div class="container">
+            <ul class="offer-section__list">
+              <li class="offer-section__item offer-section__item--grayscale">
+                <section class="offer-item">
+                  <div class="offer-item__content">
+                    <h3 class="offer-item__title">Поднимает настроение</h3>
+                    <p class="offer-item__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+                  </div>
+                </section>
+              </li>
+              <li class="offer-section__item offer-section__item--pink">
+                <section class="offer-item">
+                  <div class="offer-item__content">
+                    <h3 class="offer-item__title">Меняет мир вокруг</h3>
+                    <p class="offer-item__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                  </div>
+                </section>
+              </li>
+              <li class="offer-section__item offer-section__item--smile">
+                <section class="offer-item">
+                  <div class="offer-item__content">
+                    <h3 class="offer-item__title">Заводит новых друзей</h3>
+                    <p class="offer-item__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+                  </div>
+                </section>
+              </li>
+            </ul>
+          </div>
+          <div class="container effect-section-wrap">
+            <section class="effect-section" data-time="24">
+              <h3 class="effect-section__title">Эффект на 24 часа!</h3>
+              <p class="effect-section__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+              <a class="effect-section__link" href="#">Узнать больше об исследовании</a>
             </section>
-          </li>
-          <li class="offer-section__item">
-            <section class="offer-item">
-              <div class="offer-item__content">
-                <h3 class="offer-item__title">Меняет мир вокруг</h3>
-                <p class="offer-item__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-              </div>
-              <picture class="offer-item__image-wrap">
-                <source srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== 1w" sizes="1px" media="(max-width: 1200px)">
-                <img src="img/iphone-screen-2-desktop@1x.png" alt="Мусорные баки в розом свете">
-              </picture>
-            </section>
-          </li>
-          <li class="offer-section__item">
-            <section class="offer-item">
-              <div class="offer-item__content">
-                <h3 class="offer-item__title">Заводит новых друзей</h3>
-                <p class="offer-item__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-              </div>
-              <div class="offer-item__image-wrap"></div>
-              <picture class="offer-item__image-wrap">
-                <source srcset="img/iphone-screen-3-desktop@1x.png" media="(min-width: 1200px)">
-                <source srcset="img/iphone-screen-3-tablet@1x.png" media="(min-width: 660px)">
-                <img src="img/iphone-screen-mobile@1x.png" alt="Розовые мусорные баки со смайликом">
-              </picture>
-            </section>
-          </li>
-        </ul>
+          </div>
+        </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer container">
       <a class="footer__logo logo">
         <h6 class="visually-hidden">PINK - приложение для смартфона</h6>
-        <img class="logo__img" src="img/logo-pink-blue-mobile.svg" width="145" height="40" alt="Логотип">
+        <picture>
+          <source srcset="img/logo-pink-blue-desktop.svg" media="(min-width: 1200px)">
+          <img class="logo__img logo__img--footer" src="img/logo-pink-blue-mobile.svg" width="145" height="40" alt="Логотип">
+        </picture>
       </a>
       <section class="footer-social-wrap">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>

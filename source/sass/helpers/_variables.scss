@@ -8,6 +8,8 @@ $mobile-view: 320px;
 
 // CSS переменные
 :root {
+  --container-gap: calc(50% - 470px);
+
   --base-fz: #{$base-fz + px};
   --font-family: #{$font}, "Arial", "Helvetica Neue", "sans-serif";
 
@@ -53,4 +55,18 @@ $mobile-view: 320px;
   --basic-green-btn-hover-rgb: 28, 155, 94;
   --basic-green-btn: #2aab6d;
   --basic-green-btn-rgb: 42, 171, 109;
+
+
+  @media (min-width: $tablet-view) {
+    $base-fz: 18;
+    --base-fz: #{$base-fz + px};
+  }
+
+  @media (max-width: 960px) {
+    --container-gap: 10px;
+  }
+
+  @media (max-width: $tablet-view) {
+    --container-gap: 0;
+  }
 }
