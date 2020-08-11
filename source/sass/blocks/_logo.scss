@@ -1,0 +1,13 @@
+.logo__img {
+  display: block;
+
+  @media (min-width: $tablet-view) {
+    width: 145px;
+    height: 40px;
+  }
+
+  @media (min-width: $desktop-view) {
+    width: 147px;
+    height: 40px;
+  }
+}

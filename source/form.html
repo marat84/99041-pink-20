@@ -9,41 +9,53 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <a class="header__logo logo" href="index.html">
-        <h1 class="visually-hidden">PINK - приложение для смартфона</h1>
-        <img class="logo__img" src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип">
-      </a>
-      <nav class="header__nav nav">
-        <ul class="nav-list">
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="index.html">Главная</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="photo.html">Фотографии</a>
-          </li>
-          <li class="nav-list__item active">
-            <a class="nav-list__link">Конкурс</a>
-          </li>
-          <li class="nav-list__item">
-            <a class="nav-list__link" href="https://htmlacademy.ru/">HTML Academy</a>
-          </li>
-        </ul>
-      </nav>
-      <button class="header__menu mobile-menu">
-        <span class="visually-hidden">Показать навигационное меню</span>
-      </button>
-      <div class="header-section-wrap">
-        <section class="hold-phone">
+      <div class="header__wrap">
+        <div class="header__logo-wrap">
+          <a class="header__logo logo" href="index.html">
+            <h1 class="visually-hidden">PINK - приложение для смартфона</h1>
+            <picture>
+              <source srcset="img/logo-pink-white-desktop.svg" media="(min-width: 1200px)">
+              <source srcset="img/logo-pink-white-tablet.svg" media="(min-width: 660px)">
+              <img class="logo__img" src="img/logo-pink-white-mobile.svg" width="74" height="23" alt="Логотип">
+            </picture>
+          </a>
+          <button class="header__menu mobile-menu">
+            <span class="visually-hidden">Показать навигационное меню</span>
+            <img src="img/icon-menu-cross.svg" width="23" height="23">
+          </button>
+        </div>
+        <nav class="header__nav nav">
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="index.html">Главная</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="photo.html">Фотографии</a>
+            </li>
+            <li class="nav-list__item active">
+              <a class="nav-list__link">Конкурс</a>
+            </li>
+            <li class="nav-list__item">
+              <a class="nav-list__link" href="https://htmlacademy.ru/">HTML Academy</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-section-wrap container">
+        <section class="hold-phone hold-phone--inner-page">
           <h2 class="hold-phone__title">Конкурс на самое безбашенное путешествие с Пинк</h2>
         </section>
       </div>
     </header>
     <main class="main">
     </main>
-    <footer class="footer">
+    <footer class="footer container">
       <a class="footer__logo logo" href="index.html">
         <h6 class="visually-hidden">PINK - приложение для смартфона</h6>
-        <img class="logo__img" src="img/logo-pink-blue-mobile.svg" width="145" height="40" alt="Логотип">
+        <picture>
+          <source srcset="img/logo-pink-blue-desktop.svg" media="(min-width: 1200px)">
+          <img class="logo__img logo__img--footer" src="img/logo-pink-blue-mobile.svg" width="145" height="40" alt="Логотип">
+        </picture>
       </a>
       <section class="footer-social-wrap">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
