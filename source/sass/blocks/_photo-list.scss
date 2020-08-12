@@ -3,7 +3,7 @@
   grid-template-columns: 1fr;
   padding-left: 20px;
   padding-right: 20px;
-  grid-gap: 20px;
+  grid-gap: 19.5px;
 
   @media (min-width: $tablet-view) {
     grid-template-columns: 1fr 1fr;
@@ -15,6 +15,7 @@
     grid-template-columns: repeat(3, 1fr);
     padding-left: 0;
     padding-right: 0;
+    grid-row-gap: 50px;
   }
 }
 
@@ -22,12 +23,14 @@
   @media (min-width: $tablet-view) {
     &:first-child {
       grid-column-start: span 2;
+      margin-bottom: 32px;
     }
   }
 
   @media (min-width: $desktop-view) {
     &:first-child {
       grid-column-start: span 3;
+      margin-bottom: 0;
     }
   }
 }

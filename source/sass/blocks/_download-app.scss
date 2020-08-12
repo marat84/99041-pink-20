@@ -9,6 +9,13 @@
     padding-top: 0;
     padding-bottom: 0;
   }
+
+  @media (min-width: $desktop-view) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 10px;
+    max-width: 300px;
+  }
 }
 
 .download-app__btn {
@@ -22,12 +29,25 @@
   margin-bottom: 32px;
   width: 100%;
   max-width: 300px;
+
+  @media (min-width: $tablet-view) {
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: $desktop-view) {
+    margin-bottom: 70px;
+  }
 }
 
 .download-app__title {
   margin-bottom: 2.5px;
   font-size: 18px;
   line-height: 1;
+
+  @media (min-width: $desktop-view) {
+    font-size: 21px;
+    margin-bottom: 0;
+  }
 }
 
 .download-app__list {
@@ -35,6 +55,14 @@
   align-items: baseline;
   justify-content: center;
   margin-bottom: 19px;
+
+  @media (min-width: $tablet-view) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-view) {
+    margin-bottom: 49px;
+  }
 }
 
 .download-app__item {

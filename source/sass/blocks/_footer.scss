@@ -22,8 +22,10 @@
 
 .footer__logo {
   margin-bottom: 34px;
+  transform: translateY(-6px);
 
   @media (min-width: $tablet-view) {
     margin-bottom: 0;
+    transform: translateY(6px);
   }
 }

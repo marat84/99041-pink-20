@@ -1,10 +1,14 @@
 .photo-section__text {
   text-align: center;
-  line-height: 24px;
+  line-height: 30px;
+  margin: 4px 35px 49px;
 
   @media (min-width: $tablet-view) {
     font-size: 18px;
-    line-height: 30px;
-    margin: 59px 50px 85px;
+    margin: 50px 50px 77px;
+  }
+
+  @media (min-width: $desktop-view) {
+    margin: 50px 175px 89px;
   }
 }

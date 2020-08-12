@@ -41,6 +41,7 @@
       }
 
       @media (min-width: $desktop-view) {
+        top: 53px;
         right: var(--container-gap);
       }
     }
