@@ -1,9 +1,9 @@
 .photo-content {
   color: var(--basic-color);
-  padding: 25px 10px 25px 17px;
+  padding: 19px 10px 19px 17px;
 
   @media (min-width: $tablet-view) {
-    padding: 30px;
+    padding: 23px 30px;
     display: flex;
     flex-direction: column;
     align-self: center;
@@ -17,11 +17,16 @@
       width: auto;
     }
   }
+
+  @media (min-width: $desktop-view) {
+    padding: 24px 27px;
+  }
 }
 
 .photo-content__title {
   line-height: 24px;
   font-weight: 700;
+  margin-bottom: 0;
 
   @media (min-width: $tablet-view) {
     font-size: 14px;
@@ -31,14 +36,20 @@
 }
 
 .photo-content__text {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 9px;
+
   @media (min-width: $tablet-view) {
     font-size: 14px;
     line-height: 24px;
     width: 100%;
-    margin-top: 6px;
+    margin-bottom: 12px;
+    min-height: 48px;
 
-    &--margin {
+    &--first {
       margin-bottom: 0;
+      min-height: auto;
     }
   }
 }
@@ -72,10 +83,15 @@
       left: auto;
       right: 0;
     }
+
+    @media (min-width: $desktop-view) {
+      right: 4px;
+      margin-top: -7px;
+    }
   }
 
   @media (min-width: $tablet-view) {
-    padding-right: 31px;
+    padding-right: 29px;
     padding-left: 0;
     display: block;
     width: 100%;
@@ -85,5 +101,9 @@
       width: auto;
       order: -1;
     }
+  }
+
+  @media (min-width: $desktop-view) {
+    padding-right: 33px;
   }
 }

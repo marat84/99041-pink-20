@@ -3,12 +3,13 @@
   background-color: var(--basic-color);
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 50% -54px;
+  background-position: 50% -67px;
+  overflow: hidden;
 
   @media (min-width: $tablet-view) {
     position: relative;
     background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-position-y: -105px;
+    background-position-y: -110px;
   }
 
   @media (min-width: $desktop-view) {
