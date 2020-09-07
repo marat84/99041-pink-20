@@ -1,0 +1,13 @@
+block variables
+
+mixin head
+  meta(charset='utf-8')
+  meta(name="viewport", content="width=device-width, initial-scale=1")
+
+  title= title
+  link(href="css/styles.min.css", rel="stylesheet")
+
+  link(rel="preload", href="fonts/opensans.woff2", type="font/woff2", as="font", crossorigin="anonymous")
+
+  if block
+    block

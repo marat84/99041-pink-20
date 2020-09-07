@@ -1,0 +1,96 @@
+extends ../layout/main
+
+block variables
+  - var title = "HTML Academy: PINK - Фотографии";
+  - var pageTitle = "Фотографии пользователей";
+  - var photoPage = true;
+
+block content
+  section.photo-section.container
+    h3.visually-hidden= pageTitle
+    p.photo-section__text Взгляните на фотографии, которые выкладывают пользователи! Видите как не хватает ваших?
+    ul.photo-section__list.photo-list
+      li.photo-list__item
+        article.photo-item
+          div.photo-item__image-wrap.photo-item__image-wrap--panorama(data-notice="Панорама дня")
+            picture
+              source(srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg 2x", media="(min-width: " + desktopView + ")")
+              source(srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg 2x", media="(min-width: " + tabletView + ")")
+              img.photo-item__img.photo-item__img--size(src="img/panorama-mobile@1x.jpg", srcset="img/panorama-mobile@2x.jpg 2x" alt="Мост над пропастью", width=320, height=137)
+          div.photo-item__content.photo-content.photo-content--display
+            h4.photo-content__title Анна #[small.photo-content__notice (5 минут назад)]
+            p.photo-content__text.photo-content__text--first Прыгать или нет? Напишите в комментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
+            b.photo-content__likes.photo-content__likes--position Нравится: 215
+      li.photo-list__item
+        article.photo-item
+          .photo-item__image-wrap
+            picture
+              source(srcset="img/photo-car-desktop@1x.jpg, img/photo-car-desktop@2x.jpg 2x", media="(min-width: " + desktopView + ")")
+              source(srcset="img/photo-car-tablet@1x.jpg, img/photo-car-tablet@2x.jpg 2x", media="(min-width: " + tabletView + ")")
+              img.photo-item__img(src="img/photo-car-mobile@1x.jpg", srcset="img/photo-car-mobile@2x.jpg 2x" alt="Белая машина", width="280", height="180")
+          div.photo-item__content.photo-content
+            h4.photo-content__title Левон #[small.photo-content__notice (5 часов назад)]
+            p.photo-content__text Вчера он на луну летал, сегодня в руки к нам попал.
+            b.photo-content__likes Нравится: 356
+      li.photo-list__item
+        article.photo-item
+          .photo-item__image-wrap
+            picture
+              source(srcset="img/photo-drumset-desktop@1x.jpg, img/photo-drumset-desktop@2x.jpg 2x", media="(min-width: " + desktopView + ")")
+              source(srcset="img/photo-drumset-tablet@1x.jpg, img/photo-drumset-tablet@2x.jpg 2x", media="(min-width: " + tabletView + ")")
+              img.photo-item__img(src="img/photo-drumset-mobile@1x.jpg", srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Барабаны", width="280", height="180")
+          div.photo-item__content.photo-content
+            h4.photo-content__title Антон #[small.photo-content__notice (12 часов назад)]
+            p.photo-content__text Соседи будут рады!
+            b.photo-content__likes Нравится: 666
+      li.photo-list__item
+        article.photo-item
+          .photo-item__image-wrap
+            picture
+              source(srcset="img/photo-window-desktop@1x.jpg, img/photo-window-desktop@2x.jpg 2x", media="(min-width: " + desktopView + ")")
+              source(srcset="img/photo-window-tablet@1x.jpg, img/photo-window-tablet@2x.jpg 2x", media="(min-width: " + tabletView + ")")
+              img.photo-item__img(src="img/photo-window-mobile@1x.jpg", srcset="img/photo-window-mobile@2x.jpg 2x" alt="Вид на небоскрёб", width="280", height="180")
+          div.photo-item__content.photo-content
+            h4.photo-content__title Борис #[small.photo-content__notice (20 часов назад)]
+            p.photo-content__text Здесь могла быть ваша цитата о высоком и вечном.
+            b.photo-content__likes Нравится: 215
+      li.photo-list__item
+        article.photo-item
+          .photo-item__image-wrap
+            picture
+              source(srcset="img/photo-fair-desktop@1x.jpg, img/photo-fair-desktop@2x.jpg 2x", media="(min-width: " + desktopView + ")")
+              source(srcset="img/photo-fair-tablet@1x.jpg, img/photo-fair-tablet@2x.jpg 2x", media="(min-width: " + tabletView + ")")
+              img.photo-item__img(src="img/photo-fair-mobile@1x.jpg", srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Базар", width="280", height="180")
+          //-div.photo-item__image-wrap
+            img.photo-item__img(src="https://via.placeholder.com/280x180", width="280", height="180", alt="Базар")
+          div.photo-item__content.photo-content
+            h4.photo-content__title Сергей #[small.photo-content__notice (25 часов назад)]
+            p.photo-content__text Самая кубанская в мире!
+            b.photo-content__likes Нравится: 4
+      li.photo-list__item
+        article.photo-item
+          .photo-item__image-wrap
+            picture
+              source(srcset="img/photo-pov-desktop@1x.jpg, img/photo-pov-desktop@2x.jpg 2x", media="(min-width: " + desktopView + ")")
+              source(srcset="img/photo-pov-tablet@1x.jpg, img/photo-pov-tablet@2x.jpg 2x", media="(min-width: " + tabletView + ")")
+              img.photo-item__img(src="img/photo-pov-mobile@1x.jpg", srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Горы", width="280", height="180")
+          //-div.photo-item__image-wrap
+            img.photo-item__img(src="https://via.placeholder.com/280x180", width="280", height="180", alt="Горы")
+          div.photo-item__content.photo-content
+            h4.photo-content__title Максим #[small.photo-content__notice (40 часов назад)]
+            p.photo-content__text Где снег-то?
+            b.photo-content__likes Нравится: 150
+      li.photo-list__item
+        article.photo-item
+          .photo-item__image-wrap
+            picture
+              source(srcset="img/photo-wing-desktop@1x.jpg, img/photo-wing-desktop@2x.jpg 2x", media="(min-width: " + desktopView + ")")
+              source(srcset="img/photo-wing-tablet@1x.jpg, img/photo-wing-tablet@2x.jpg 2x", media="(min-width: " + tabletView + ")")
+              img.photo-item__img(src="img/photo-wing-mobile@1x.jpg", srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Самолёт", width="280", height="180")
+          //-div.photo-item__image-wrap
+            img.photo-item__img(src="https://via.placeholder.com/280x180", width="280", height="180", alt="Самолёт")
+          div.photo-item__content.photo-content
+            h4.photo-content__title Надежда #[small.photo-content__notice (45 часов назад)]
+            p.photo-content__text Всем GM и взаимные лайки!
+            b.photo-content__likes Нравится: 2560
+

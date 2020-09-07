@@ -1,0 +1,46 @@
+extends ../layout/main
+
+block variables
+  - var title = "HTML Academy: PINK - Главная страница";
+  - var mainPage = true;
+  - var pageTitle = "Взгляните на жизнь иначе!";
+
+block content
+  section.offer-section
+    h2.offer-section__title Устали от серости мегаполиса?
+    p.offer-section__text Нам есть, что вам предложить!
+    .offer-section__wrap
+      .container
+        ul.offer-section__list
+          li.offer-section__item.offer-section__item--grayscale
+            section.offer-item
+              .offer-item__content
+                h3.offer-item__title Поднимает настроение
+                p.offer-item__text Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+              //-picture.offer-item__image-wrap
+                source(srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== 1w", sizes="1px", media="(max-width: " + desktopView + ")")
+                img(src="img/iphone-screen-1-desktop@1x.png", alt="Мусорные баки")
+          li.offer-section__item.offer-section__item--pink
+            section.offer-item
+              .offer-item__content
+                h3.offer-item__title Меняет мир вокруг
+                p.offer-item__text Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+              //-picture.offer-item__image-wrap
+                source(srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw== 1w", sizes="1px", media="(max-width: " + desktopView + ")")
+                img(src="img/iphone-screen-2-desktop@1x.png", alt="Мусорные баки в розом свете")
+                //-img(src="https://via.placeholder.com/136x245", width="136", height="245", alt="Мусорные баки в розом свете")
+          li.offer-section__item.offer-section__item--smile
+            section.offer-item
+              .offer-item__content
+                h3.offer-item__title Заводит новых друзей
+                p.offer-item__text Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+              //-picture.offer-item__image-wrap
+                source(srcset="img/iphone-screen-3-desktop@1x.png", media="(min-width: " + desktopView + ")")
+                source(srcset="img/iphone-screen-3-tablet@1x.png", media="(min-width: " + tabletView + ")")
+                img(src="img/iphone-screen-mobile@1x.png", alt="Розовые мусорные баки со смайликом")
+                //-img(src="https://via.placeholder.com/136x245", width="136", height="245", alt="Розовые мусорные баки со смайликом")
+      .container.effect-section-wrap
+        section.effect-section(data-time="24")
+          h3.effect-section__title Эффект #[span на 24 часа!]
+          p.effect-section__text Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
+          a(href="#").effect-section__link Узнать больше об исследовании

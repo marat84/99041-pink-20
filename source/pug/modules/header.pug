@@ -1,0 +1,66 @@
+.header__wrap
+  .header__logo-wrap
+    if (mainPage)
+      a.header__logo.logo
+        h1.visually-hidden PINK - приложение для смартфона
+        picture
+          source(srcset="img/logo-pink-white-desktop.svg", media="(min-width: " + desktopView + ")")
+          source(srcset="img/logo-pink-white-tablet.svg", media="(min-width: " + tabletView + ")")
+          img.logo__img(src="img/logo-pink-white-mobile.svg", width="74", height="23", alt="Логотип")
+    else
+      a(href="index.html").header__logo.logo
+        h1.visually-hidden PINK - приложение для смартфона
+        picture
+          source(srcset="img/logo-pink-white-desktop.svg", media="(min-width: " + desktopView + ")")
+          source(srcset="img/logo-pink-white-tablet.svg", media="(min-width: " + tabletView + ")")
+          img.logo__img(src="img/logo-pink-white-mobile.svg", width="74", height="23", alt="Логотип")
+    button.header__menu.mobile-menu
+      span.visually-hidden Показать навигационное меню
+      img(src="img/icon-menu-cross.svg", width=23, height=23)
+
+  nav.header__nav.nav
+    ul.nav-list
+
+      if (mainPage)
+        li.nav-list__item
+          a.nav-list__link Главная
+      else
+        li.nav-list__item
+          a(href="index.html").nav-list__link Главная
+
+      if (photoPage)
+        li.nav-list__item.active
+          a.nav-list__link Фотографии
+      else
+        li.nav-list__item
+          a(href="photo.html").nav-list__link Фотографии
+
+      if (formPage)
+        li.nav-list__item.active
+          a.nav-list__link Конкурс
+      else
+        li.nav-list__item
+          a(href="form.html").nav-list__link Конкурс
+
+      li.nav-list__item
+        a(href="https://htmlacademy.ru/").nav-list__link HTML Academy
+div.header-section-wrap.container(class=(mainPage) ? "header-section-wrap--main-page": "")
+  section.hold-phone(class=(!mainPage) ? "hold-phone--inner-page": "")
+    h2.hold-phone__title(class=(mainPage) ? "hold-phone__title--main-page": (photoPage) ? "hold-phone__title--photo-page": "")= pageTitle
+    if (mainPage)
+      picture
+        source(srcset="img/iphone-hand-desktop@1x.png, img/iphone-hand-desktop@2x.png 2x", media="(min-width: " + desktopView + ")")
+        source(srcset="img/iphone-hand-tablet@1x.png, img/iphone-hand-tablet@2x.png 2x", media="(min-width: " + tabletView + ")")
+        img.hold-phone__img(src="img/iphone-hand-mobile@1x.png", srcset="img/iphone-hand-mobile@2x.png 2x" alt="Музей в розовом свете", width="258", height="286")
+    if (mainPage)
+      div.download-app
+        a(href="https://play.google.com/store?hl=ru").download-app__btn
+          h3.download-app__title Скачать приложение
+        ul.download-app__list
+          li.download-app__item
+            a(href="https://www.apple.com/ru/ios/app-store/", aria-label="Скачать приложение в App Store").download-app__link.download-app__link--apple-icon
+          li.download-app__item
+            a(href="https://play.google.com/store?hl=ru", aria-label="Скачать приложение в Google Play").download-app__link.download-app__link--google-play-icon
+          li.download-app__item
+            a(href="https://www.microsoft.com/ru-RU/store/apps", aria-label="Скачать приложение в Microsoft Store").download-app__link.download-app__link--microsoft-icon
+        p.download-app__text Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8

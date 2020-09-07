@@ -1,0 +1,18 @@
+include ../helpers/variables.pug
+
+block variables
+include head
+
+doctype html
+html(lang="ru").page
+  head
+    +head
+      block addHead
+  body.page__body
+    header.header
+      include ../modules/header.pug
+    main.main
+      block content
+    footer.footer.container
+      include ../modules/footer.pug
+
