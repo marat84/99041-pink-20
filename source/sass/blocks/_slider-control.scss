@@ -1,0 +1,19 @@
+.slider-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.slider-control__icon {
+  display: block;
+  line-height: 0;
+}
+
+.slider-control__button {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  opacity: 0.3;
+}

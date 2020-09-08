@@ -1,0 +1,31 @@
+.slider-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: $desktop-view) {
+    display: none;
+  }
+}
+
+.slider-nav__item {
+  &:not(:last-child) {
+    margin-right: 19px;
+  }
+}
+
+.slider-nav__button {
+  display: block;
+  padding: 0;
+  margin: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(var(--basic-color-rgb), 0.3);
+
+  &.active {
+    background-color: var(--basic-white);
+    box-shadow: 0 0 0 3px var(--basic-color);
+  }
+}

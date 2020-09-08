@@ -44,3 +44,38 @@ block content
           h3.effect-section__title Эффект #[span на 24 часа!]
           p.effect-section__text Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!
           a(href="#").effect-section__link Узнать больше об исследовании
+  section.container.comment-section
+    h2.visually-hidden Отзывы
+    ul.comment-section__list
+      li
+        article.comment-block
+          span.comment-block__icon
+            svg(width="79", height="79", fill="var(--basic-gray-light-3)")
+              use(xlink:href="img/sprite.svg#icon-quotes")
+          div.comment-block__title-wrap
+            h4.comment-block__title Николай Петров
+            em.comment-block__sub-title 25 лет, водитель трамвая
+          p.comment-block__text «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+    ul.comment-section__nav.slider-nav
+      li.slider-nav__item
+        button(type="button").slider-nav__button.active
+          span.visually-hidden Слайдер номер 1
+      li.slider-nav__item
+        button(type="button").slider-nav__button
+          span.visually-hidden Слайдер номер 2
+      li.slider-nav__item
+        button(type="button").slider-nav__button
+          span.visually-hidden Слайдер номер 3
+    ul.comment-section__control.slider-control
+      li.slider-control__item
+        button.slider-control__button.slider-control__button--prev
+          span.visually-hidden Предыдущий слайдер
+          span.slider-control__icon
+            svg(width="41", height="41", fill="var(--basic-color)")
+              use(xlink:href="img/sprite.svg#icon-review-arrow-left")
+      li.slider-control__item
+        button.slider-control__button.slider-control__button--next
+          span.visually-hidden Следующий слайдер
+          span.slider-control__icon
+            svg(width="41", height="41", fill="var(--basic-color)")
+              use(xlink:href="img/sprite.svg#icon-review-arrow-right")

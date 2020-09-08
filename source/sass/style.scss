@@ -2,6 +2,8 @@
 @import "helpers/functions";
 @import "base/fonts";
 @import "base/global";
+@import "blocks/slider-nav";
+@import "blocks/slider-control";
 @import "blocks/container";
 @import "blocks/header";
 @import "blocks/mobile-menu";
@@ -14,6 +16,8 @@
 @import "blocks/offer-section";
 @import "blocks/offer-item";
 @import "blocks/effect-section";
+@import "blocks/comment-section";
+@import "blocks/comment-block";
 @import "blocks/footer";
 @import "blocks/footer-social-list";
 @import "blocks/powered-by";

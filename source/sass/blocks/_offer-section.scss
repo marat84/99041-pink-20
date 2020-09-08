@@ -95,7 +95,7 @@
 
 .offer-section__list {
   margin-top: 20px;
-  padding: 89px 20px 318px;
+  padding: 89px 0 318px;
   background-image: url("../img/iphone-screen-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: 50% calc(100% + 44px);
@@ -108,14 +108,14 @@
   @media (min-width: $tablet-view) {
     text-align: left;
     background-image: url("../img/iphone-screen-3-tablet@1x.png");
-    background-position: 10px 100%;
+    background-position: 0 100%;
     background-size: 268px 481px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     min-height: 506px;
-    padding: 96px 10px 18px 320px;
+    padding: 96px 0 18px 310px;
     margin-top: 10px;
 
     @media (min-resolution: 2dppx) {

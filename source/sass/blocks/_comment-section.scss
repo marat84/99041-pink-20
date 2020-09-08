@@ -1,0 +1,39 @@
+.comment-section {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-view) {
+    padding-top: 50px;
+  }
+
+  @media (min-width: $desktop-view) {
+    position: relative;
+    padding-top: 64px;
+  }
+}
+
+.comment-section__list {
+  display: flex;
+
+  @media (min-width: $desktop-view) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+.comment-section__nav {
+  margin-top: 34px;
+}
+
+.comment-section__control {
+  display: none;
+
+  @media (min-width: $desktop-view) {
+    position: absolute;
+    top: 51%;
+    left: calc(var(--container-gap) - 10px);
+    right: calc(var(--container-gap) - 10px);
+    display: flex;
+  }
+}

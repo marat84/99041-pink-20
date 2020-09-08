@@ -58,11 +58,10 @@ $mobile-view: 320px;
   @media (min-width: $tablet-view) {
     $base-fz: 18;
     --base-fz: #{$base-fz + px};
-    --container-gap: 10px;
   }
 
-  @media (max-width: $mobile-view) {
-    --container-gap: 0;
+  @media (min-width: $mobile-view) {
+    --container-gap: 20px;
   }
 
   @media (min-width: $desktop-view) {

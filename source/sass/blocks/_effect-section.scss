@@ -18,8 +18,7 @@
 
   @media (min-width: $tablet-view) {
     display: block;
-    padding-right: 20px;
-    padding-left: 320px;
+    padding-left: 310px;
     position: relative;
     min-height: 380px;
     padding-top: 95px;
@@ -28,7 +27,7 @@
       content: "";
       position: absolute;
       top: 50%;
-      left: 10px;
+      left: 0;
       width: 238px;
       height: 276px;
       margin-top: -138px;
@@ -49,7 +48,7 @@
       content: attr(data-time);
       position: absolute;
       top: calc(50% - 82.5px);
-      left: 27.5px;
+      left: 17.5px;
       width: 202px;
       height: 202px;
       display: flex;
