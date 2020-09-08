@@ -7,7 +7,17 @@
 }
 
 .nav-list {
+  max-height: 0;
+  overflow: hidden;
+
+  .menu-open & {
+    transition: max-height 0.3s;
+    max-height: 325px;
+  }
+
   @media (min-width: $desktop-view) {
+    max-height: none;
+    overflow: visible;
     display: flex;
     align-items: center;
     flex-wrap: wrap;

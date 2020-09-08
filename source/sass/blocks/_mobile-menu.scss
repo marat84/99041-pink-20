@@ -1,0 +1,20 @@
+.mobile-menu {
+  position: relative;
+  outline: none;
+}
+
+.mobile-menu__close {
+  display: none;
+
+  .menu-open & {
+    display: block;
+  }
+}
+
+.mobile-menu__burger {
+  display: block;
+
+  .menu-open & {
+    display: none;
+  }
+}

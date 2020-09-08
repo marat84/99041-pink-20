@@ -14,9 +14,11 @@
           source(srcset="img/logo-pink-white-desktop.svg", media="(min-width: " + desktopView + ")")
           source(srcset="img/logo-pink-white-tablet.svg", media="(min-width: " + tabletView + ")")
           img.logo__img(src="img/logo-pink-white-mobile.svg", width="74", height="23", alt="Логотип")
-    button.header__menu.mobile-menu
-      span.visually-hidden Показать навигационное меню
-      img(src="img/icon-menu-cross.svg", width=23, height=23)
+    button(type="button", aria-label="Показать навигационное меню", data-alt-text="Скрыть навигационное меню").header__menu.mobile-menu.js-mobile-menu
+      svg.mobile-menu__close(width="23", height="23", fill="var(--basic-white)")
+        use(xlink:href="img/sprite.svg#icon-menu-cross")
+      svg.mobile-menu__burger(width="50", height="24", fill="var(--basic-white)")
+        use(xlink:href="img/sprite.svg#icon-menu-burger")
 
   nav.header__nav.nav
     ul.nav-list
@@ -49,6 +51,8 @@ div.header-section-wrap.container(class=(mainPage) ? "header-section-wrap--main-
     h2.hold-phone__title(class=(mainPage) ? "hold-phone__title--main-page": (photoPage) ? "hold-phone__title--photo-page": "")= pageTitle
     if (mainPage)
       picture
+        source(srcset="img/iphone-hand-desktop@1x.webp, img/iphone-hand-desktop@2x.webp 2x", type="image/webp", media="(min-width: " + desktopView + ")")
+        source(srcset="img/iphone-hand-tablet@1x.webp, img/iphone-hand-tablet@2x.webp 2x", type="image/webp", media="(min-width: " + tabletView + ")")
         source(srcset="img/iphone-hand-desktop@1x.png, img/iphone-hand-desktop@2x.png 2x", media="(min-width: " + desktopView + ")")
         source(srcset="img/iphone-hand-tablet@1x.png, img/iphone-hand-tablet@2x.png 2x", media="(min-width: " + tabletView + ")")
         img.hold-phone__img(src="img/iphone-hand-mobile@1x.png", srcset="img/iphone-hand-mobile@2x.png 2x" alt="Музей в розовом свете", width="258", height="286")

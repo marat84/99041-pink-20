@@ -9,7 +9,7 @@
     align-items: flex-start;
     min-height: 619px;
     padding-right: 320px;
-    padding-top: 94px;
+    padding-top: 100px;
     margin-left: -10px;
     margin-right: -10px;
 
@@ -22,15 +22,14 @@
 
   @media (min-width: $desktop-view) {
     position: relative;
-    min-height: 743px;
+    min-height: auto;
     padding-right: 600px;
-    padding-top: 110px;
-    box-sizing: content-box;
+    padding-bottom: 125px;
 
     &--inner-page {
-      min-height: 224px;
       padding-right: 0;
-      padding-top: 170px;
+      padding-top: 60px;
+      padding-bottom: 39px;
       align-items: center;
     }
   }
@@ -73,7 +72,7 @@
     }
 
     @media (min-width: $desktop-view) {
-      margin-top: 99px;
+      //margin-top: 99px;
       font-size: 50px;
       padding-left: 10px;
       line-height: 68px;
