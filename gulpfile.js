@@ -11,6 +11,7 @@ const imageMin = require("gulp-imagemin");
 const rename = require("gulp-rename");
 const svgstore = require("gulp-svgstore");
 const webp = require("gulp-webp");
+const minJs = require("gulp-terser");
 const sync = require("browser-sync").create();
 
 // Delete Build
@@ -24,7 +25,7 @@ exports.buildDelete = buildDelete;
 // Copy Fonts
 
 const copyFont = () => {
-  return gulp.src("source/fonts/*.{woff, woff2}")
+  return gulp.src("source/fonts/*.*")
     .pipe(gulp.dest("build/fonts"))
 };
 
@@ -73,9 +74,7 @@ exports.sprite = sprite;
 
 const htmlPUG = () => {
   return gulp.src("source/pug/pages/*.pug")
-    .pipe(pug({
-      pretty: true
-    }))
+    .pipe(pug())
     .pipe(gulp.dest("build/"))
     .pipe(sync.stream());
 };
@@ -101,6 +100,21 @@ const styles = () => {
 
 exports.styles = styles;
 
+// Javascript
+
+const js = () => {
+  return gulp.src("source/js/*.js")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(minJs())
+    .pipe(rename("main.min.js"))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+};
+
+exports.js = js;
+
 // Server
 
 const server = (done) => {
@@ -120,9 +134,9 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("pug/**/*.pug", gulp.series("htmlPUG"));
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/pug/**/*.pug", gulp.series("htmlPUG"));
+  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
+  gulp.watch("source/js/**/*.js", gulp.series("js"));
 };
 
 const build = gulp.series(
@@ -133,6 +147,7 @@ const build = gulp.series(
   sprite,
   htmlPUG,
   styles,
+  js,
 );
 
 exports.build = build;
