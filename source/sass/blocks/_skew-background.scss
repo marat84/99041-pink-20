@@ -1,0 +1,30 @@
+.skew-background {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 50%;
+    width: 100%;
+    z-index: -2;
+    background-color: var(--basic-gray-lighter);
+    transform: skewY(-5.5deg);
+
+    @media (min-width: $tablet-view) {
+      transform: skewY(-4.5deg);
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -2;
+    background-color: var(--basic-gray-lighter);
+  }
+}

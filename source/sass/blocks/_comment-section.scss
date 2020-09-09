@@ -1,15 +1,17 @@
 .comment-section {
   text-align: center;
   padding-top: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 29px;
 
   @media (min-width: $tablet-view) {
     padding-top: 50px;
+    padding-bottom: 17px;
   }
 
   @media (min-width: $desktop-view) {
     position: relative;
     padding-top: 64px;
+    padding-bottom: 26px;
   }
 }
 

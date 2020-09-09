@@ -1,0 +1,38 @@
+.tariff-section {
+  padding-top: 112px;
+  padding-bottom: 50px;
+  overflow: hidden;
+
+  &::before {
+    top: 20px;
+    transform: skewY(-3.3deg);
+
+    @media (min-width: $tablet-view) {
+      transform: skewY(-3.6deg);
+    }
+
+    @media (min-width: $desktop-view) {
+      top: 50px;
+      transform: skewY(-4.8deg);
+    }
+  }
+
+  &::after {
+    @media (min-width: $desktop-view) {
+      top: 30%;
+    }
+  }
+
+  @media (min-width: $tablet-view) {
+    padding-top: 97px;
+  }
+
+  @media (min-width: $desktop-view) {
+    padding-top: 156px;
+    padding-bottom: 95px;
+  }
+}
+
+.tariff-section__nav {
+  margin-top: 45px;
+}

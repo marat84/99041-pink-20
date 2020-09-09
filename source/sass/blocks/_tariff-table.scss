@@ -1,0 +1,209 @@
+.tariff-table {
+  --cell-width: 280px;
+
+  //border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 100%;
+  transform: translateX(calc(var(--cell-width) * -1));
+
+  @media (min-width: $tablet-view) {
+    --cell-width: 152px;
+
+    table-layout: auto;
+    transform: translateX(0);
+  }
+
+  @media (min-width: $desktop-view) {
+    --cell-width: 233px;
+  }
+}
+
+.tariff-table__row {
+  &:nth-child(2) .tariff-table__td:first-child {
+    border-top-left-radius: 4px;
+  }
+
+  &:last-child .tariff-table__td:first-child {
+    border-bottom-left-radius: 4px;
+  }
+
+  &:last-child .tariff-table__td:last-child {
+    border-bottom-right-radius: 4px;
+  }
+}
+
+.tariff-table__th {
+  padding-top: 12px;
+  padding-bottom: 32px;
+  background-color: var(--basic-color);
+  color: var(--basic-white);
+  width: var(--cell-width);
+  position: relative;
+  box-shadow: 0 1px 0 0.1px var(--basic-color);
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -1px;
+    left: -1px;
+    top: -1.5px;
+    bottom: -1.5px;
+    border-left: 2px solid var(--basic-gray-light);
+    border-right: 2px solid var(--basic-gray-light);
+    z-index: 15;
+    pointer-events: none;
+  }
+
+  &:nth-child(2) {
+    border-top-left-radius: 4px;
+
+    &::after {
+      border-left: none;
+    }
+  }
+
+  &:last-child {
+    border-top-right-radius: 4px;
+
+    &::after {
+      border-right: none;
+    }
+  }
+
+  &:first-child {
+    display: none;
+    background: none;
+
+    @media (min-width: $tablet-view) {
+      display: table-cell;
+      opacity: 0;
+      visibility: hidden;
+      border-bottom: none;
+    }
+  }
+
+  @media (min-width: $tablet-view) {
+    padding-bottom: 12px;
+  }
+
+  @media (min-width: $desktop-view) {
+    padding-top: 18px;
+    padding-bottom: 20px;
+  }
+}
+
+.tariff-table__td {
+  width: var(--cell-width);
+  background-color: var(--basic-white);
+  box-shadow: 0 0 0 1px var(--basic-gray-light), inset 0 0 0 1px var(--basic-gray-light);
+  vertical-align: middle;
+  padding: 15px 17px 15px 22px;
+
+  &::before {
+    content: attr(data-text);
+    font-size: 14px;
+    line-height: 30px;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-view) {
+      display: none;
+    }
+  }
+
+  &:first-child {
+    display: none;
+
+    @media (min-width: $tablet-view) {
+      display: table-cell;
+      text-align: left;
+    }
+  }
+
+  @media (min-width: $tablet-view) {
+    text-align: center;
+    padding: 6px 16px;
+  }
+
+  @media (min-width: $desktop-view) {
+    padding: 13px 22px;
+  }
+}
+
+.tariff-table__hit {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "ХИТ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotate(-45deg) translateX(-52%) translateY(119%);
+    transform-origin: top left;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    background-color: var(--basic-red);
+
+    @media (min-width: $tablet-view) {
+      transform: rotate(-45deg) translateX(-52%) translateY(113%);
+      line-height: 20px;
+    }
+
+    @media (min-width: $desktop-view) {
+      transform: rotate(-45deg) translateX(-52%) translateY(143%);
+      line-height: 22px;
+    }
+  }
+}
+
+.tariff-table__title {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  @media (min-width: $desktop-view) {
+    font-size: 18px;
+  }
+}
+
+.tariff-table__price {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+  margin-bottom: 0;
+
+  @media (min-width: $desktop-view) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+.tariff-table__icon {
+  width: 31px;
+  float: right;
+  display: inline-flex;
+  justify-content: center;
+  line-height: 0;
+
+  @media (min-width: $tablet-view) {
+    float: none;
+  }
+}
+
+.tariff-table__text {
+  font-size: 14px;
+  line-height: 30px;
+  margin-bottom: 0;
+
+  @media (min-width: $desktop-view) {
+    font-size: 18px;
+  }
+}

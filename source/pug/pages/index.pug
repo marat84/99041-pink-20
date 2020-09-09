@@ -9,7 +9,7 @@ block content
   section.offer-section
     h2.offer-section__title Устали от серости мегаполиса?
     p.offer-section__text Нам есть, что вам предложить!
-    .offer-section__wrap
+    .offer-section__wrap.skew-background
       .container
         ul.offer-section__list
           li.offer-section__item.offer-section__item--grayscale
@@ -79,3 +79,81 @@ block content
           span.slider-control__icon
             svg(width="41", height="41", fill="var(--basic-color)")
               use(xlink:href="img/sprite.svg#icon-review-arrow-right")
+  section.container.tariff-section.skew-background
+    h2.visually-hidden Тарифы
+    table.tariff-table
+      tr.tariff-table__row
+        th.tariff-table__th
+        th.tariff-table__th
+          b.tariff-table__title База
+          p.tariff-table__price 1,99 USD
+        th.tariff-table__th.tariff-table__hit
+          b.tariff-table__title Стандарт
+          p.tariff-table__price 3,99 USD
+        th.tariff-table__th
+          b.tariff-table__title Анлим
+          p.tariff-table__price 9,99 USD
+      tr.tariff-table__row
+        td.tariff-table__td
+          p.tariff-table__text Розовый фильтр
+        td.tariff-table__td(data-text="Розовый фильтр")
+          span.tariff-table__icon
+            span.visually-hidden Да
+            svg(width="31", height="31", fill="var(--basic-green)")
+              use(xlink:href="img/sprite.svg#icon-yes")
+        td.tariff-table__td(data-text="Розовый фильтр")
+          span.tariff-table__icon
+            span.visually-hidden Да
+            svg(width="31", height="31", fill="var(--basic-green)")
+              use(xlink:href="img/sprite.svg#icon-yes")
+        td.tariff-table__td(data-text="Розовый фильтр")
+          span.tariff-table__icon
+            span.visually-hidden Да
+            svg(width="31", height="31", fill="var(--basic-green)")
+              use(xlink:href="img/sprite.svg#icon-yes")
+      tr.tariff-table__row
+        td.tariff-table__td
+          p.tariff-table__text Смайлики
+        td.tariff-table__td(data-text="Смайлики")
+          span.tariff-table__icon
+            span.visually-hidden Нет
+            svg(width="27", height="27", fill="var(--basic-orange)")
+              use(xlink:href="img/sprite.svg#icon-no")
+        td.tariff-table__td(data-text="Смайлики")
+          span.tariff-table__icon
+            span.visually-hidden Да
+            svg(width="31", height="31", fill="var(--basic-green)")
+              use(xlink:href="img/sprite.svg#icon-yes")
+        td.tariff-table__td(data-text="Смайлики")
+          span.tariff-table__icon
+            span.visually-hidden Да
+            svg(width="31", height="31", fill="var(--basic-green)")
+              use(xlink:href="img/sprite.svg#icon-yes")
+      tr.tariff-table__row
+        td.tariff-table__td
+          p.tariff-table__text Комментарии
+        td.tariff-table__td(data-text="Комментарии")
+          span.tariff-table__icon
+            span.visually-hidden Нет
+            svg(width="27", height="27", fill="var(--basic-orange)")
+              use(xlink:href="img/sprite.svg#icon-no")
+        td.tariff-table__td(data-text="Комментарии")
+          span.tariff-table__icon
+            span.visually-hidden Нет
+            svg(width="27", height="27", fill="var(--basic-orange)")
+              use(xlink:href="img/sprite.svg#icon-no")
+        td.tariff-table__td(data-text="Комментарии")
+          span.tariff-table__icon
+            span.visually-hidden Да
+            svg(width="31", height="31", fill="var(--basic-green)")
+              use(xlink:href="img/sprite.svg#icon-yes")
+    ul.tariff-section__nav.slider-nav
+      li.slider-nav__item
+        button(type="button").slider-nav__button
+          span.visually-hidden Слайдер номер 1
+      li.slider-nav__item
+        button(type="button").slider-nav__button.active
+          span.visually-hidden Слайдер номер 2
+      li.slider-nav__item
+        button(type="button").slider-nav__button
+          span.visually-hidden Слайдер номер 3
