@@ -60,6 +60,7 @@
       color: var(--basic-red);
       border-radius: 300px;
       border: 16px solid currentColor;
+      background-color: var(--basic-white);
 
       @media (min-width: $desktop-view) {
         top: calc(50% - 97px);
@@ -68,6 +69,7 @@
         height: 252px;
         font-size: 120px;
         border-width: 18px;
+        background-color: var(--basic-gray-lighter);
       }
     }
   }

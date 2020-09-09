@@ -25,6 +25,8 @@
 
   @media (min-width: $tablet-view) {
     padding-top: 97px;
+    padding-bottom: 66px;
+    overflow: visible;
   }
 
   @media (min-width: $desktop-view) {
@@ -35,4 +37,8 @@
 
 .tariff-section__nav {
   margin-top: 45px;
+
+  @media (min-width: $tablet-view) {
+    display: none;
+  }
 }

@@ -18,6 +18,11 @@
     position: relative;
     background-color: var(--basic-color);
     transition: background-color 0.3s;
+
+    @media (min-width: $desktop-view) {
+      position: absolute;
+      background-color: rgba(var(--basic-black-rgb), 0.3);
+    }
   }
 
   @media (min-width: $tablet-view) {

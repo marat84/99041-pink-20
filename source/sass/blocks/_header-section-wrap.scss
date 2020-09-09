@@ -10,6 +10,11 @@
   .menu-open & {
     padding-top: 0;
     background-position: 50% calc(var(--mobile-header-height) * -1);
+
+    @media (min-width: $desktop-view) {
+      padding-top: var(--mobile-header-height);
+      background-position: 50% 0;
+    }
   }
 
   @media (min-resolution: 2dppx) {

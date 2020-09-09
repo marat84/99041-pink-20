@@ -8,11 +8,20 @@
     margin-right: 14px;
     margin-bottom: 0;
   }
+
+  @media (min-width: $desktop-view) {
+    margin-right: 0;
+    margin-left: 8px;
+  }
 }
 
 .footer-social-list__item {
   &:not(:last-child) {
     margin-right: 14px;
+
+    @media (min-width: $desktop-view) {
+      margin-right: 12px;
+    }
   }
 }
 
