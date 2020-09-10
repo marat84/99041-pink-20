@@ -1,0 +1,49 @@
+.upload-section {
+  padding-top: 40px;
+
+  @media (min-width: $tablet-view) {
+    padding-top: 65px;
+  }
+
+  @media (min-width: $desktop-view) {
+    padding-top: 57px;
+    margin-bottom: 30px;
+  }
+}
+
+.upload-section__text {
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 42px;
+
+  & span {
+    display: block;
+  }
+
+  @media (min-width: $tablet-view) {
+    font-size: 18px;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: $desktop-view) {
+    margin-bottom: 66px;
+  }
+}
+
+.upload-form__image-wrap {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-view) {
+    margin-bottom: 0;
+  }
+}
+
+.upload-form__image {
+  display: block;
+
+  @media (min-width: $tablet-view) {
+    width: 300px;
+    height: 400px;
+  }
+}

@@ -114,4 +114,45 @@ block content
             h4.photo-content__title Надежда #[small.photo-content__notice (45 часов назад)]
             p.photo-content__text Всем GM и взаимные лайки!
             b.photo-content__likes Нравится: 2560
+  section.upload-section.container
+    h3.visually-hidden Загрузите свои фотографии
+    p.upload-section__text Затмите их всех! #[span Выкладывайте все, что накопилось в телефоне!]
+    form.upload-form(action="https://echo.htmlacademy.ru/")
+      .upload-form__image-wrap
+        picture
+          source(srcset="img/photo-road-desktop@1x.webp, img/photo-road-desktop@2x.webp 2x", type="image/webp", media="(min-width: " + desktopView + ")")
+          source(srcset="img/photo-road-tablet@1x.webp, img/photo-road-tablet@2x.webp 2x", type="image/webp", media="(min-width: " + tabletView + ")")
+          source(srcset="img/photo-road-mobile@1x.webp, img/photo-road-mobile@2x.webp 2x", type="image/webp", media="(min-width: " + mobileView + ")")
+          source(srcset="img/photo-road-desktop@1x.jpg, img/photo-road-desktop@2x.jpg 2x", media="(min-width: " + desktopView + ")")
+          source(srcset="img/photo-road-tablet@1x.jpg, img/photo-road-tablet@2x.jpg 2x", media="(min-width: " + tabletView + ")")
+          img.upload-form__image(src="img/photo-road-mobile@1x.jpg", srcset="img/photo-road-mobile@2x.jpg 2x" alt="Зимняя дорога", width="280", height="374")
+      .upload-form__content
+        ul.upload-form__filter.filter-form-list
+          li.filter-form-list__item.active
+            span.filter-form-list__icon.filter-form-list__icon--crop
+              svg(width="44", height="44", fill="var(--basic-color)")
+                use(xlink:href="img/sprite.svg#icon-editor-crop")
+            div.filter-form-list__line.filter-range
+              span.filter-range__line
+              span(tabindex="0", aria-label="Уровень обрезания фото").filter-range__thumbler.filter-range__thumbler--crop
+          li.filter-form-list__item
+            span.filter-form-list__icon.filter-form-list__icon--fill
+              svg(width="48", height="48", fill="var(--basic-color)")
+                use(xlink:href="img/sprite.svg#icon-editor-fill")
+            div.filter-form-list__line.filter-range
+              span.filter-range__line
+              span(tabindex="0", aria-label="Уровень насыщенности цвета фото").filter-range__thumbler.filter-range__thumbler--fill
+          li.filter-form-list__item
+            span.filter-form-list__icon.filter-form-list__icon--contrast
+              svg(width="32", height="32", fill="var(--basic-color)")
+                use(xlink:href="img/sprite.svg#icon-editor-contrast")
+            div.filter-form-list__line.filter-range
+              span.filter-range__line
+              span(tabindex="0", aria-label="Уровень контраста фото").filter-range__thumbler.filter-range__thumbler--contrast
+
+        hr.upload-form__rule
+        .upload-form__button-wrap
+          button(type="submit").upload-form__button Запостить
+          button(type="reset").upload-form__button.upload-form__button--reset Отмена
+
 

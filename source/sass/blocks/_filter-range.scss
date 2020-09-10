@@ -1,0 +1,60 @@
+.filter-range {
+  position: relative;
+  width: 100%;
+}
+
+.filter-range__line {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: var(--basic-color);
+}
+
+.filter-range__thumbler {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 14px;
+  margin-top: -7px;
+  background: var(--basic-white);
+  border: 2px solid var(--basic-red);
+  cursor: pointer;
+
+  &--crop {
+    left: 80%;
+
+    @media (min-width: $tablet-view) {
+      left: 73%;
+    }
+
+    @media (min-width: $desktop-view) {
+      left: 24%;
+    }
+  }
+
+  &--fill {
+    left: 20%;
+
+    @media (min-width: $tablet-view) {
+      left: 12%;
+    }
+
+    @media (min-width: $desktop-view) {
+      left: 86%;
+    }
+  }
+
+  &--contrast {
+    left: 50%;
+
+    @media (min-width: $tablet-view) {
+      left: 47.5%;
+    }
+
+    @media (min-width: $desktop-view) {
+      left: 56%;
+    }
+  }
+}

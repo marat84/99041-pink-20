@@ -1,0 +1,143 @@
+.filter-form-list {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 37px;
+
+  @media (min-width: $tablet-view) {
+    display: block;
+    grid-template-columns: auto;
+  }
+}
+
+.filter-form-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: $tablet-view) {
+    padding-bottom: 24px;
+    padding-top: 24px;
+    padding-right: 18px;
+    border-bottom: 1px solid rgba(var(--basic-color-rgb), 0.1);
+
+    &:first-child {
+      padding-top: 10px;
+    }
+  }
+
+  @media (min-width: $desktop-view) {
+    padding-bottom: 14px;
+    padding-top: 13px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.filter-form-list__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  line-height: 0;
+  flex-shrink: 0;
+  opacity: 0.3;
+
+  .active & {
+    opacity: 1;
+
+    & svg {
+      fill: var(--basic-red);
+    }
+  }
+
+  &--crop {
+    & svg {
+      @media (min-width: $tablet-view) {
+        width: 22px;
+        height: 22px;
+      }
+
+      @media (min-width: $desktop-view) {
+        width: 44px;
+        height: 44px;
+      }
+    }
+  }
+
+  &--fill {
+    & svg {
+      @media (min-width: $tablet-view) {
+        width: 24px;
+        height: 24px;
+      }
+
+      @media (min-width: $desktop-view) {
+        width: 48px;
+        height: 48px;
+      }
+    }
+  }
+
+  &--contrast {
+    & svg {
+      @media (min-width: $tablet-view) {
+        width: 16px;
+        height: 16px;
+      }
+
+      @media (min-width: $desktop-view) {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+
+  @media (min-width: $tablet-view) {
+    opacity: 1;
+    width: 24px;
+    margin-right: 28px;
+    margin-left: 3px;
+
+    & svg {
+      fill: var(--basic-red);
+    }
+  }
+
+  @media (min-width: $desktop-view) {
+    width: 48px;
+    margin-left: -1px;
+    margin-right: 32px;
+  }
+}
+
+.filter-form-list__line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 240px;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+
+  .active & {
+    display: block;
+  }
+
+  @media (min-width: $tablet-view) {
+    position: relative;
+    display: block;
+  }
+
+  @media (min-width: $desktop-view) {
+    width: 288px;
+  }
+}

@@ -4,6 +4,10 @@
   margin-left: calc(var(--container-gap) * -1);
   margin-right: calc(var(--container-gap) * -1);
 
+  &--inner-page {
+    padding-top: 28px;
+  }
+
   @media (min-width: $tablet-view) {
     display: flex;
     flex-direction: column;
