@@ -1,0 +1,16 @@
+.radio-list {
+  @media (min-width: $desktop-view) {
+    padding-left: 71px;
+    padding-right: 60px;
+  }
+}
+
+.radio-list__item {
+  &:not(:last-child) {
+    margin-bottom: 35px;
+
+    @media (min-width: $desktop-view) {
+      margin-bottom: 36px;
+    }
+  }
+}

@@ -69,3 +69,19 @@ img {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+
+.tablet-view {
+  display: none;
+
+  @media (min-width: $tablet-view) {
+    display: inline-block;
+  }
+}
+
+.desktop-view {
+  display: none;
+
+  @media (min-width: $desktop-view) {
+    display: inline-block;
+  }
+}

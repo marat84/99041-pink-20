@@ -2,6 +2,10 @@
 @import "helpers/functions";
 @import "base/fonts";
 @import "base/global";
+@import "blocks/checkbox";
+@import "blocks/radio";
+@import "blocks/button";
+@import "blocks/modal";
 @import "blocks/slider-nav";
 @import "blocks/slider-control";
 @import "blocks/skew-background";
@@ -27,6 +31,9 @@
 @import "blocks/upload-form";
 @import "blocks/filter-range";
 @import "blocks/filter-form-list";
+@import "blocks/checkbox-list";
+@import "blocks/radio-list";
+@import "blocks/form";
 @import "blocks/footer";
 @import "blocks/footer-social-list";
 @import "blocks/powered-by";

@@ -14,8 +14,8 @@
   line-height: 0;
 
   &--panorama {
-    margin-left: -20px;
-    margin-right: -20px;
+    margin-left: calc(var(--container-gap) * -1);
+    margin-right: calc(var(--container-gap) * -1);
 
     @media (min-width: $desktop-view) {
       margin: 0 -130px;

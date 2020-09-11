@@ -6,4 +6,81 @@ block variables
   - var formPage = true;
 
 block content
+  form(action="https://echo.htmlacademy.ru/").form.container
+    p.form__text Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на #[span вашу бонусную карту! #[span.tablet-view Пожалуйста, заполните форму ниже:]]
+    .form__wrap
+      p.form__group
+        label(for="form-second-name").form__label Фамилия:
+        input(type="text", placeholder="Укажите фамилию *", name="form-second-name", required).form__input#form-second-name
+      p.form__group
+        label(for="form-name").form__label Имя:
+        input(type="text", placeholder="Введите ваше имя *", name="form-name", required).form__input#form-name
+      p.form__group
+        label(for="form-third-name").form__label Отчество:
+        input(type="text", placeholder="Ну и отчество тоже", name="form-third-name").form__input#form-third-name
+    fieldset.form__fieldset.form__fieldset--bg-gray.form__achievements
+      legend.form__legend Ваши безбашенные #[span достижения в путешествии]
+      .form__clearfix
+      ul.checkbox-list
+        li.checkbox-list__item
+          input#your-achievements-1.checkbox.visually-hidden(type='checkbox', name='form-achievements-shark', checked)
+          label.form__checkbox-text(for='your-achievements-1') Сделал селфи с акулой
+        li.checkbox-list__item
+          input#your-achievements-2.checkbox.visually-hidden(type='checkbox', name='form-achievements-beach', checked)
+          label.form__checkbox-text(for='your-achievements-2') Обгорел на пляже
+        li.checkbox-list__item
+          input#your-achievements-3.checkbox.visually-hidden(type='checkbox', name='form-achievements-сhuck')
+          label.form__checkbox-text(for='your-achievements-3') Видел Чака Норриса
+        li.checkbox-list__item
+          input#your-achievements-4.checkbox.visually-hidden(type='checkbox', name='form-achievements-relic')
+          label.form__checkbox-text(for='your-achievements-4') Накупил сувениров
+        li.checkbox-list__item
+          input#your-achievements-5.checkbox.visually-hidden(type='checkbox', name='form-achievements-tower', checked)
+          label.form__checkbox-text(for='your-achievements-5') Удержал башню
+        li.checkbox-list__item
+          input#your-achievements-6.checkbox.visually-hidden(type='checkbox', name='form-achievements-hotel')
+          label.form__checkbox-text(for='your-achievements-6') Разгромил отель
+    fieldset.form__fieldset.form__contact-info
+      legend.form__legend.tablet-view Контактная информация
+      .form__clearfix
+      p.form__group.form__group--column-reverse.form__group--icon-phone
+        label(for="form-phone").form__label Номер телефона
+        input(type="tel", placeholder="Номер, пожалуйста", name="form-phone").form__input#form-phone
+      p.form__group.form__group--column-reverse.form__group--icon-mail
+        label(for="form-email").form__label Адрес почты
+        input(type="email", placeholder="Введите почту *", name="form-email", required).form__input#form-email
+    fieldset.form__fieldset.form__fieldset--bg-gray.form__app
+      legend.form__legend С каким приложением #[span путешествовали?]
+      .form__clearfix
+      ul.radio-list
+        li.radio-list__item
+          input#your-app-1.radio.visually-hidden(type='radio', name='form-app', value="ios", checked)
+          label.form__checkbox-text(for='your-app-1') Pink для iOS
+        li.radio-list__item
+          input#your-app-2.radio.visually-hidden(type='radio', name='form-app', value="android")
+          label.form__checkbox-text(for='your-app-2') Pink на Android
+        li.radio-list__item
+          input#your-app-3.radio.visually-hidden(type='radio', name='form-app', value="windows")
+          label.form__checkbox-text(for='your-app-3') Windows Phone
+    fieldset.form__fieldset.form__message
+      legend.form__legend Опишите свои эмоции
+      .form__clearfix
+      p.form__group
+        label(for="form-message").visually-hidden Ваше сообщение
+        textarea(name="form-message", placeholder="Можно прям в красках, не стесняясь в выражениях").form__input.form__input--textarea#form-message
+    button(type="submit").form__button.button.js-form-button Отправить форму
+    p.form__notice #[b *] — обязательные #[span.desktop-view для заполнения] поля
+  section.modal#modal-success(role="dialog", aria-labelledby="modal-success-title").js-modal
+    .modal__body.modal__body--success
+      h3.modal__title#modal-success-title Ваша заявка отправлена
+      p.modal__text Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.
+    footer.modal__footer
+      button(type="button", data-modal="#modal-success").modal__button.modal__button--success.button.js-modal-close Закрыть окно
+  section.modal.modal--failure#modal-failure(role="dialog", aria-labelledby="modal-failure-title").js-modal
+    .modal__body
+      h3.modal__title#modal-failure-title Что-то пошло не так!
+      p.modal__text Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
+    footer.modal__footer.modal__footer--failure
+      button(type="button", data-modal="#modal-failure").modal__button.button.js-modal-close Ок
+
 

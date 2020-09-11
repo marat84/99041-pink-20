@@ -1,0 +1,142 @@
+.modal {
+  position: absolute;
+  top: 1276px;
+  left: 0;
+  width: 100vw;
+  height: auto;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 7px 15px rgba(var(--basic-black-rgb), 0.15);
+  background-color: var(--basic-white);
+  border-radius: 5px;
+  z-index: 100;
+  display: none;
+
+  &--failure {
+    top: 1424px;
+  }
+
+  @media (min-width: $tablet-view) {
+    width: 460px;
+    left: 50%;
+    margin-left: -230px;
+
+    &--failure {
+      top: 1164px;
+    }
+  }
+
+  @media (min-width: $desktop-view) {
+    width: 780px;
+    margin-left: -390px;
+
+    &--failure {
+      top: 817px;
+    }
+  }
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.4s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-500px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.modal__body {
+  padding: 40px 20px 34px;
+
+  @media (min-width: $tablet-view) {
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 26px;
+  }
+
+  @media (min-width: $desktop-view) {
+    padding-bottom: 62px;
+  }
+
+  &--success {
+    @media (min-width: $tablet-view) {
+      padding-bottom: 29px;
+    }
+
+    @media (min-width: $desktop-view) {
+      padding-bottom: 37px;
+    }
+  }
+}
+
+.modal__title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  margin-bottom: 25px;
+
+  @media (min-width: $tablet-view) {
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 23px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.modal__text {
+  line-height: 24px;
+  margin-bottom: 0;
+
+  @media (min-width: $desktop-view) {
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+}
+
+.modal__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--basic-gray-lighter);
+  padding: 50px 20px;
+
+  &--failure {
+    background-color: transparent;
+    padding-top: 6px;
+    padding-bottom: 53px;
+
+    @media (min-width: $desktop-view) {
+      background-color: var(--basic-gray-lighter);
+      padding: 50px 20px;
+    }
+  }
+}
+
+.modal__button {
+  width: 100%;
+
+  @media (min-width: $tablet-view) {
+    width: 300px;
+  }
+
+  &--success {
+    @media (min-width: $desktop-view) {
+      width: 460px;
+    }
+  }
+}

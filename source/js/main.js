@@ -20,3 +20,38 @@
     })
   }
 })();
+
+// Работа c модальными окнами
+(function () {
+  let
+    formButton = document.querySelector('.js-form-button'),
+    modalClose = document.querySelectorAll('.js-modal-close');
+
+  if (formButton) {
+
+    let modalCloseClickHandler = function (evt) {
+      evt.preventDefault();
+
+      let
+        target = evt.target,
+        modalID = target.dataset.modal,
+        currentModal = document.querySelector(modalID);
+
+      currentModal.classList.remove('modal-show');
+
+      target.removeEventListener('click', modalCloseClickHandler);
+    };
+
+    formButton.addEventListener('click', function () {
+      let modal = document.querySelectorAll('.js-modal');
+
+      modal.forEach(function (current) {
+        current.classList.add('modal-show');
+      });
+
+      modalClose.forEach(function (current) {
+        current.addEventListener('click', modalCloseClickHandler)
+      });
+    });
+  }
+})();
