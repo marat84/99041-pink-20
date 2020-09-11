@@ -16,6 +16,10 @@
   align-items: center;
   justify-content: center;
 
+  &:not(.active):hover .filter-form-list__icon {
+    opacity: 0.5;
+  }
+
   @media (min-width: $tablet-view) {
     padding-bottom: 24px;
     padding-top: 24px;
@@ -24,6 +28,10 @@
 
     &:first-child {
       padding-top: 10px;
+    }
+
+    &:not(.active):hover .filter-form-list__icon {
+      opacity: 1;
     }
   }
 
@@ -38,10 +46,6 @@
     &:last-child {
       border-bottom: none;
     }
-  }
-
-  &:not(.active):hover .filter-form-list__icon {
-    opacity: 0.5;
   }
 }
 
