@@ -34,6 +34,14 @@
   height: 48px;
   box-shadow: 0 0 0 3px rgba(var(--basic-color-rgb), 0.1);
 
+  &[href]:hover {
+    box-shadow: 0 0 0 3px rgba(var(--basic-color-rgb), 1);
+  }
+
+  &[href]:active {
+    opacity: 0.1;
+  }
+
   &--youtube-icon {
     & > svg {
       transform: translateX(2px);

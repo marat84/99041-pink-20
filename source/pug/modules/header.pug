@@ -3,17 +3,21 @@
     if (mainPage)
       a.header__logo.logo
         h1.visually-hidden PINK - приложение для смартфона
-        picture
-          source(srcset="img/logo-pink-white-desktop.svg", media="(min-width: " + desktopView + ")")
-          source(srcset="img/logo-pink-white-tablet.svg", media="(min-width: " + tabletView + ")")
-          img.logo__img(src="img/logo-pink-white-mobile.svg", width="74", height="23", alt="Логотип")
+        svg.logo__icon.logo__icon--mobile(width="74", height="23", fill="var(--basic-white)")
+          use(xlink:href="img/sprite.svg#icon-logo-pink-white-mobile")
+        svg.logo__icon.logo__icon--tablet(width="145", height="40", fill="var(--basic-white)")
+          use(xlink:href="img/sprite.svg#icon-logo-pink-white-tablet")
+        svg.logo__icon.logo__icon--desktop(width="147", height="40", fill="var(--basic-white)")
+          use(xlink:href="img/sprite.svg#icon-logo-pink-white-desktop")
     else
       a(href="index.html").header__logo.logo
         h1.visually-hidden PINK - приложение для смартфона
-        picture
-          source(srcset="img/logo-pink-white-desktop.svg", media="(min-width: " + desktopView + ")")
-          source(srcset="img/logo-pink-white-tablet.svg", media="(min-width: " + tabletView + ")")
-          img.logo__img(src="img/logo-pink-white-mobile.svg", width="74", height="23", alt="Логотип")
+        svg.logo__icon.logo__icon--mobile(width="74", height="23", fill="var(--basic-white)")
+          use(xlink:href="img/sprite.svg#icon-logo-pink-white-mobile")
+        svg.logo__icon.logo__icon--tablet(width="145", height="40", fill="var(--basic-white)")
+          use(xlink:href="img/sprite.svg#icon-logo-pink-white-tablet")
+        svg.logo__icon.logo__icon--desktop(width="147", height="40", fill="var(--basic-white)")
+          use(xlink:href="img/sprite.svg#icon-logo-pink-white-desktop")
     button(type="button", aria-label="Показать навигационное меню", data-alt-text="Скрыть навигационное меню").header__menu.mobile-menu.js-mobile-menu
       svg.mobile-menu__close(width="23", height="23", fill="var(--basic-white)")
         use(xlink:href="img/sprite.svg#icon-menu-cross")

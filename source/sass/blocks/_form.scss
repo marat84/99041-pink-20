@@ -166,6 +166,16 @@
     color: var(--basic-color);
   }
 
+  &:hover {
+    border: 2px solid var(--basic-color);
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    border: 2px solid var(--basic-red);
+  }
+
   &--textarea {
     box-sizing: content-box;
     padding-top: 13px;

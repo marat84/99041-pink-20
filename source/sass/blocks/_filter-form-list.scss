@@ -39,6 +39,10 @@
       border-bottom: none;
     }
   }
+
+  &:not(.active):hover .filter-form-list__icon {
+    opacity: 0.5;
+  }
 }
 
 .filter-form-list__icon {

@@ -31,9 +31,13 @@
   flex-shrink: 0;
 }
 
-.checkbox:focus + label::before,
 .checkbox + label:hover::before {
-  opacity: 1;
+  border: 2px solid var(--basic-color);
+}
+
+.checkbox:focus + label::before,
+.checkbox:active + label::before {
+  border: 2px solid var(--basic-red);
 }
 
 .checkbox:disabled + label {

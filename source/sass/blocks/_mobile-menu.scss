@@ -1,6 +1,16 @@
 .mobile-menu {
   position: relative;
-  outline: none;
+  cursor: pointer;
+
+  &:hover svg {
+    fill: var(--basic-red);
+  }
+
+  &:active {
+    outline: none;
+    fill: var(--basic-white);
+    opacity: 0.3;
+  }
 }
 
 .mobile-menu__close {

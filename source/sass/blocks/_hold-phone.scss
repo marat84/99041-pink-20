@@ -50,6 +50,7 @@
   color: currentColor;
   padding: 0 30px;
   margin-bottom: 29px;
+  width: 100%;
 
   @media (min-width: $tablet-view) {
     font-size: 50px;
@@ -68,6 +69,7 @@
   }
 
   &--main-page {
+    width: auto;
     line-height: 120%;
 
     @media (min-width: $tablet-view) {

@@ -24,4 +24,13 @@
   line-height: 0;
   display: block;
   margin-left: 15px;
+
+  &[href]:hover svg {
+    fill: var(--basic-color);
+  }
+
+  &[href]:active svg {
+    fill: var(--basic-color);
+    opacity: 0.3;
+  }
 }

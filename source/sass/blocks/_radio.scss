@@ -38,9 +38,13 @@
   }
 }
 
-.radio:focus + label::before,
 .radio + label:hover::before {
-  opacity: 1;
+  border: 2px solid var(--basic-color);
+}
+
+.radio:active + label::before,
+.radio:focus + label::before {
+  border: 2px solid var(--basic-red);
 }
 
 .radio:disabled + label {

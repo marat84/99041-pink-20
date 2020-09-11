@@ -77,6 +77,21 @@
   letter-spacing: 0.8px;
   color: var(--basic-red);
   border: 3px solid currentColor;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--basic-white);
+    background-color: var(--basic-red);
+    border-color: var(--basic-red);
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    color: rgba(var(--basic-white-rgb), 0.3);
+    background-color: var(--basic-red);
+    border-color: transparent;
+  }
 
   &:not(:last-child) {
     margin-bottom: 12px;
@@ -85,6 +100,22 @@
   &--reset {
     color: var(--basic-color);
     opacity: 0.1;
+
+    &:hover {
+      opacity: 0.3;
+      color: var(--basic-color);
+      background-color: transparent;
+      border-color: currentColor;
+    }
+
+    &:focus,
+    &:active {
+      opacity: 1;
+      outline: none;
+      color: rgba(var(--basic-white-rgb), 0.3);
+      background-color: rgba(var(--basic-color-rgb), 0.3);
+      border-color: transparent;
+    }
   }
 
   @media (min-width: $tablet-view) {

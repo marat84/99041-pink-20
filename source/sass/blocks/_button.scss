@@ -14,4 +14,22 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
+
+  &:hover {
+    background-color: var(--basic-green-btn-hover);
+    border: 2px solid var(--basic-green-btn-hover);
+  }
+
+  &:active {
+    outline: none;
+    color: rgba(var(--basic-white-rgb), 0.1);
+  }
+
+  &.disabled,
+  &[disabled] {
+    outline: none;
+    color: var(--basic-white);
+    background: var(--basic-gray-light);
+    border: 2px solid var(--basic-gray-light);
+  }
 }

@@ -34,12 +34,12 @@ exports.copyFont = copyFont;
 // Image Minification
 
 const imgmin = () => {
-  return gulp.src("source/img/**/*.*")
+  return gulp.src("source/img/*.*")
     .pipe(imageMin([
+      imageMin.svgo(),
       imageMin.gifsicle({interlaced: true}),
       imageMin.mozjpeg({progressive: true}),
       imageMin.optipng({optimizationLevel: 3}),
-      imageMin.svgo()
     ]))
     .pipe(gulp.dest("build/img"))
     .pipe(sync.stream());
@@ -50,7 +50,7 @@ exports.imgmin = imgmin;
 // WEBP
 
 const webpImg = () => {
-  return gulp.src("source/img/**/*.*")
+  return gulp.src("source/img/*.*")
     .pipe(webp())
     .pipe(gulp.dest("build/img"))
     .pipe(sync.stream());
@@ -61,7 +61,14 @@ exports.webpImg = webpImg;
 // SVG sprites
 
 const sprite = () => {
-  return gulp.src("source/img/**/icon-*.svg")
+  return gulp.src("source/img/icon-*.svg")
+    .pipe(imageMin([
+      imageMin.svgo({
+        plugins: [
+          {removeViewBox: false}
+        ]
+      })
+    ]))
     .pipe(svgstore())
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"))
@@ -89,7 +96,7 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(['last 2 versions'])
     ]))
     .pipe(csso())
     .pipe(rename("styles.min.css"))

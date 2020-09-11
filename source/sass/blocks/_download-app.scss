@@ -26,6 +26,15 @@
   width: 100%;
   max-width: 300px;
 
+  &[href]:hover {
+    background-color: var(--basic-white);
+    border-color: var(--basic-white);
+  }
+
+  &[href]:active {
+    color: rgba(var(--basic-red-rgb), 0.3);
+  }
+
   @media (min-width: $tablet-view) {
     margin-bottom: 46px;
   }

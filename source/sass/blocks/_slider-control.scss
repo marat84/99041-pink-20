@@ -16,4 +16,13 @@
   border: none;
   cursor: pointer;
   opacity: 0.3;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 0.1;
+  }
 }

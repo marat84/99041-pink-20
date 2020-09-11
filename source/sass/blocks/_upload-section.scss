@@ -41,6 +41,7 @@
 
 .upload-form__image {
   display: block;
+  margin: auto;
 
   @media (min-width: $tablet-view) {
     width: 300px;

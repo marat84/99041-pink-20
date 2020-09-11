@@ -65,6 +65,17 @@
   color: var(--basic-red);
   margin-bottom: 0;
 
+  &[href]:hover {
+    color: var(--basic-color);
+    text-decoration: underline;
+  }
+
+  &[href]:active {
+    color: var(--basic-color);
+    text-decoration: none;
+    opacity: 0.3;
+  }
+
   & span {
     display: block;
   }

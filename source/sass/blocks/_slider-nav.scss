@@ -24,6 +24,16 @@
   border: none;
   background-color: rgba(var(--basic-color-rgb), 0.3);
 
+  &:not(.active):hover {
+    background-color: rgba(var(--basic-color-rgb), 0.6);
+    cursor: pointer;
+  }
+
+  &:not(.active):active {
+    outline: none;
+    background-color: rgba(var(--basic-color-rgb), 0.1);
+  }
+
   &.active {
     background-color: var(--basic-white);
     box-shadow: 0 0 0 3px var(--basic-color);

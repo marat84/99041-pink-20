@@ -49,9 +49,22 @@
   color: var(--basic-white);
   text-transform: uppercase;
 
+  &[href]:hover {
+    color: var(--basic-red);
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+
   @media (min-width: $desktop-view) {
     line-height: 18px;
     text-transform: capitalize;
     font-weight: 400;
+
+    &[href]:active {
+      color: var(--basic-white);
+      opacity: 0.3;
+    }
   }
 }

@@ -1,16 +1,17 @@
 if (mainPage)
   a.footer__logo.logo
     h6.visually-hidden PINK - приложение для смартфона
-    picture
-      source(srcset="img/logo-pink-blue-desktop.svg", media="(min-width: " + desktopView + ")")
-      img.logo__img.logo__img--footer(src="img/logo-pink-blue-mobile.svg", width="145", height="40", alt="Логотип")
+    svg.logo__icon.logo__icon--mobile(width='145', height='40')
+      use(xlink:href='img/sprite.svg#icon-logo-pink-blue-mobile')
+    svg.logo__icon.logo__icon--desktop(width='147', height='40')
+      use(xlink:href='img/sprite.svg#icon-logo-pink-blue-desktop')
 else
-  a(href="index.html").footer__logo.logo
+  a(href="index.html").footer__logo.logo.logo--footer
     h6.visually-hidden PINK - приложение для смартфона
-    picture
-      source(srcset="img/logo-pink-blue-desktop.svg", media="(min-width: " + desktopView + ")")
-      img.logo__img.logo__img--footer(src="img/logo-pink-blue-mobile.svg", width="145", height="40", alt="Логотип")
-
+    svg.logo__icon.logo__icon--mobile(width='145', height='40')
+      use(xlink:href='img/sprite.svg#icon-logo-pink-blue-mobile')
+    svg.logo__icon.logo__icon--desktop(width='147', height='40')
+      use(xlink:href='img/sprite.svg#icon-logo-pink-blue-desktop')
 section.footer-social-wrap
   h2.visually-hidden Мы в социальных сетях
   ul.footer-social-list
