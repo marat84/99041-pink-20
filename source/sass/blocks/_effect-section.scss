@@ -10,11 +10,8 @@
 }
 
 .effect-section {
+display: none;
   text-align: left;
-
-  @media (min-width: $mobile-view) {
-    display: none;
-  }
 
   @media (min-width: $tablet-view) {
     display: block;

@@ -25,6 +25,9 @@
   font-style: normal;
   font-weight: 300;
 
+  padding-left: var(--container-gap);
+  padding-right: var(--container-gap);
+
   @media (min-width: $tablet-view) {
     font-size: 40px;
     line-height: 54px;
