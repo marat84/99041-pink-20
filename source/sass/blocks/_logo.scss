@@ -19,6 +19,18 @@
         fill: var(--basic-color);
       }
     }
+
+    @media (min-width: $tablet-view) {
+      .logo__icon--mobile {
+        display: block;
+      }
+    }
+
+    @media (min-width: $desktop-view) {
+      .logo__icon--mobile {
+        display: none;
+      }
+    }
   }
 }
 
