@@ -43,12 +43,13 @@ block content
     fieldset.form__fieldset.form__contact-info
       legend.form__legend.tablet-view Контактная информация
       .form__clearfix
-      p.form__group.form__group--column-reverse.form__group--icon-phone
-        label(for="form-phone").form__label Номер телефона
-        input(type="tel", placeholder="Номер, пожалуйста", name="form-phone").form__input#form-phone
-      p.form__group.form__group--column-reverse.form__group--icon-mail
-        label(for="form-email").form__label Адрес почты
-        input(type="email", placeholder="Введите почту *", name="form-email", required).form__input#form-email
+      .form__group-wrap
+        p.form__group.form__group--column-reverse.form__group--icon-phone
+          label(for="form-phone").form__label Номер телефона
+          input(type="tel", placeholder="Номер, пожалуйста", name="form-phone").form__input#form-phone
+        p.form__group.form__group--column-reverse.form__group--icon-mail
+          label(for="form-email").form__label Адрес почты
+          input(type="email", placeholder="Введите почту *", name="form-email", required).form__input#form-email
     fieldset.form__fieldset.form__fieldset--bg-gray.form__app
       legend.form__legend С каким приложением #[span путешествовали?]
       .form__clearfix

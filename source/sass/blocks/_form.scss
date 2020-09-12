@@ -72,6 +72,7 @@
 
   &--column-reverse {
     @media (min-width: $tablet-view) {
+      width: 100%;
       flex-direction: column-reverse;
       align-items: flex-start;
 
@@ -211,6 +212,8 @@
   }
 
   @media (min-width: $tablet-view) {
+    display: flex;
+    flex-wrap: wrap;
     border: 2px solid var(--basic-gray-light);
     padding: 43px 59px 53px;
     grid-column-start: span 2;
@@ -231,6 +234,10 @@
     display: block;
     clear: both;
   }
+
+  @media (min-width: $tablet-view) {
+    display: none;
+  }
 }
 
 .form__legend {
@@ -239,7 +246,7 @@
   float: right;
   width: 100%;
   line-height: 18px;
-  margin: 0 0 39px;
+  margin: 0 auto 39px;
 
   & > span {
     display: block;
@@ -337,7 +344,7 @@
   margin-bottom: -2px;
 
   .form__legend {
-    margin: 0 0 36px;
+    margin: 0 auto 36px;
 
     @media (min-width: $tablet-view) {
       margin-bottom: 0;
@@ -360,7 +367,7 @@
   margin-bottom: 7px;
 
   & .form__legend {
-    margin: 0 0 16px;
+    margin: 0 auto 16px;
 
     @media (min-width: $tablet-view) {
       margin-bottom: 0;
@@ -370,6 +377,10 @@
   @media (min-width: $tablet-view) {
     padding-top: 36px;
     padding-bottom: 52px;
+
+    & .form__group {
+      width: 100%;
+    }
   }
 
   @media (min-width: $desktop-view) {
