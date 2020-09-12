@@ -17,7 +17,7 @@
     }
   }
 
-  @media (min-resolution: 2dppx) {
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
   }
 
@@ -27,7 +27,7 @@
     background-size: 1200px 729px;
     overflow: hidden;
 
-    @media (min-resolution: 2dppx) {
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
     }
   }
@@ -37,7 +37,7 @@
     background-size: 2560px 853px;
     text-align: center;
 
-    @media (min-resolution: 2dppx) {
+    @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
     }
   }
