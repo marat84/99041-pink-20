@@ -156,21 +156,24 @@ block content
                 use(xlink:href="img/sprite.svg#icon-editor-crop")
             div.filter-form-list__line.filter-range
               span.filter-range__line
-              span(tabindex="0", aria-label="Уровень обрезания фото").filter-range__thumbler.filter-range__thumbler--crop
+              span(tabindex="0").filter-range__thumbler.filter-range__thumbler--crop
+                span.visually-hidden Уровень обрезания фото
           li.filter-form-list__item
             span.filter-form-list__icon.filter-form-list__icon--fill
               svg(width="48", height="48", fill="var(--basic-color)")
                 use(xlink:href="img/sprite.svg#icon-editor-fill")
             div.filter-form-list__line.filter-range
               span.filter-range__line
-              span(tabindex="0", aria-label="Уровень насыщенности цвета фото").filter-range__thumbler.filter-range__thumbler--fill
+              span(tabindex="0").filter-range__thumbler.filter-range__thumbler--fill
+                span.visually-hidden Уровень насыщенности цвета фото
           li.filter-form-list__item
             span.filter-form-list__icon.filter-form-list__icon--contrast
               svg(width="32", height="32", fill="var(--basic-color)")
                 use(xlink:href="img/sprite.svg#icon-editor-contrast")
             div.filter-form-list__line.filter-range
               span.filter-range__line
-              span(tabindex="0", aria-label="Уровень контраста фото").filter-range__thumbler.filter-range__thumbler--contrast
+              span(tabindex="0").filter-range__thumbler.filter-range__thumbler--contrast
+                span.visually-hidden Уровень контраста фото
 
         hr.upload-form__rule
         .upload-form__button-wrap
