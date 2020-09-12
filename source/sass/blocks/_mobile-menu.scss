@@ -13,18 +13,7 @@
   }
 }
 
+.mobile-menu__burger,
 .mobile-menu__close {
   display: none;
-
-  .menu-open & {
-    display: block;
-  }
-}
-
-.mobile-menu__burger {
-  display: block;
-
-  .menu-open & {
-    display: none;
-  }
 }

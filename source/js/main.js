@@ -5,18 +5,38 @@
   if (menuButton) {
     let
       menuButtonCloseText = menuButton.dataset.altText,
-      menuButtonOpenText = menuButton.getAttribute('aria-label');
+      menuButtonOpenText = menuButton.getAttribute('aria-label'),
+      menuIconClose = menuButton.querySelector('.js-mobile-menu-close'),
+      menuIconOpen = menuButton.querySelector('.js-mobile-menu-open');
+
+    if (document.body.classList.contains('menu-open')) {
+      document.body.classList.remove('menu-open');
+
+      menuIconOpen.style.display = 'block';
+    }
+
+    let closeMenu = function () {;
+      menuIconOpen.style.display = 'block';
+      menuIconClose.style.display = 'none';
+
+      menuButton.removeEventListener('click', closeMenu);
+    };
 
     menuButton.addEventListener('click', function (evt) {
       evt.preventDefault();
 
       document.body.classList.toggle('menu-open');
 
+      menuIconOpen.style.display = 'none';
+      menuIconClose.style.display = 'block';
+
       if (document.querySelector('.menu-open')) {
         menuButton.setAttribute('aria-label', menuButtonCloseText);
       } else {
         menuButton.setAttribute('aria-label', menuButtonOpenText);
       }
+
+      menuButton.addEventListener('click', closeMenu);
     })
   }
 })();
