@@ -18,7 +18,10 @@
     margin-right: calc(var(--container-gap) * -1);
 
     @media (min-width: $desktop-view) {
-      margin: 0 -130px;
+      position: static;
+      margin-left: 0;
+      margin-right: 0;
+      min-height: 506px;
     }
   }
 
@@ -34,14 +37,15 @@
       color: var(--basic-white);
       text-transform: uppercase;
       font-weight: bold;
-      padding: 6.5px 19.5px;
+      padding: 6px 19.5px;
 
       @media (min-width: $tablet-view) {
         top: 57px;
       }
 
       @media (min-width: $desktop-view) {
-        top: 53px;
+        top: auto;
+        transform: translateY(54px);
         right: var(--container-gap);
       }
     }
@@ -59,14 +63,19 @@
   }
 
   &--size {
+    object-fit: contain;
+
     @media (min-width: $tablet-view) {
       min-height: 509px;
       width: 660px;
     }
 
     @media (min-width: $desktop-view) {
+      position: absolute;
+      left: 0;
       min-height: 506px;
-      width: 1200px;
+      width: 100%;
+      object-position: center bottom;
     }
   }
 }
