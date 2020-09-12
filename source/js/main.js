@@ -2,7 +2,7 @@
 (function () {
   let menuButton = document.querySelector('.js-mobile-menu');
 
-  if (menuButton && window.matchMedia('(max-width: 1200px)').matches) {
+  if (menuButton) {
     let
       menuButtonCloseText = menuButton.dataset.altText,
       menuButtonOpenText = menuButton.getAttribute('aria-label');
