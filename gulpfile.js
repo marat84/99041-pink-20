@@ -88,7 +88,26 @@ const htmlPUG = () => {
 
 exports.htmlPUG = htmlPUG;
 
-// Styles
+// Minify Styles
+
+const minStyles = () => {
+  return gulp.src('source/sass/style.scss')
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer(['last 2 versions'])
+    ]))
+    .pipe(csso())
+    .pipe(rename('style.min.css'))
+    .pipe(sourcemap.write('.'))
+    .pipe(gulp.dest('build/css'))
+    .pipe(sync.stream());
+};
+
+exports.minStyles = minStyles;
+
+// Not Minify Styles
 
 const styles = () => {
   return gulp.src('source/sass/style.scss')
@@ -98,8 +117,6 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer(['last 2 versions'])
     ]))
-    .pipe(csso())
-    .pipe(rename('styles.min.css'))
     .pipe(sourcemap.write('.'))
     .pipe(gulp.dest('build/css'))
     .pipe(sync.stream());
@@ -142,7 +159,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch('source/pug/**/*.pug', gulp.series('htmlPUG'));
-  gulp.watch('source/sass/**/*.scss', gulp.series('styles'));
+  gulp.watch('source/sass/**/*.scss', gulp.series('minStyles'));
   gulp.watch('source/js/**/*.js', gulp.series('js'));
 };
 
@@ -154,6 +171,7 @@ const build = gulp.series(
   sprite,
   htmlPUG,
   styles,
+  minStyles,
   js,
 );
 
