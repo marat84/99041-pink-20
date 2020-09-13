@@ -21,7 +21,7 @@
       position: static;
       margin-left: 0;
       margin-right: 0;
-      min-height: 506px;
+      height: 506px;
     }
   }
 
@@ -64,16 +64,16 @@
 
   &--size {
     @media (min-width: $tablet-view) {
-      min-height: 509px;
+      height: 509px;
       width: 660px;
     }
 
     @media (min-width: $desktop-view) {
       position: absolute;
       left: 0;
-      min-height: 506px;
+      height: 506px;
       width: 100%;
-      object-fit: contain;
+      object-fit: cover;
       object-position: center bottom;
     }
   }
