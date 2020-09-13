@@ -344,7 +344,7 @@
   margin-bottom: -2px;
 
   .form__legend {
-    margin: 0 auto 36px;
+    margin: 0 auto 33px;
 
     @media (min-width: $tablet-view) {
       margin-bottom: 0;
@@ -364,7 +364,7 @@
 }
 
 .form__message {
-  margin-bottom: 7px;
+  margin-bottom: 10px;
 
   & .form__legend {
     margin: 0 auto 16px;
