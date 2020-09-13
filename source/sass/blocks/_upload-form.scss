@@ -18,6 +18,24 @@
   }
 }
 
+.upload-form__image-wrap {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-view) {
+    margin-bottom: 0;
+  }
+}
+
+.upload-form__image {
+  display: block;
+  margin: auto;
+
+  @media (min-width: $tablet-view) {
+    width: 300px;
+    height: 400px;
+  }
+}
+
 .upload-form__content {
   @media (min-width: $tablet-view) {
     width: 275px;
