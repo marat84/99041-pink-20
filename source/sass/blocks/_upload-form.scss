@@ -71,10 +71,10 @@
   width: 100%;
   min-height: 55px;
   border-radius: 30px;
-  font-weight: bold;
+  font-family: var(--font-family);
   font-size: 18px;
   line-height: 18px;
-  letter-spacing: 0.8px;
+  font-weight: bold;
   color: var(--basic-red);
   border: 3px solid currentColor;
   cursor: pointer;
@@ -129,6 +129,7 @@
 
   @media (min-width: $desktop-view) {
     width: 183px;
+    margin-left: 0;
 
 
     &:not(:last-child) {
