@@ -42,7 +42,6 @@
   @media (min-width: $tablet-view) {
     order: -3;
     grid-column-start: span 2;
-    margin-bottom: 2px;
   }
 
   @media (min-width: $desktop-view) {
@@ -50,6 +49,10 @@
     padding-top: 12px;
     margin-bottom: 0;
   }
+}
+
+.form__group-wrap {
+  width: 100%;
 }
 
 .form__group {
@@ -204,6 +207,8 @@
 }
 
 .form__fieldset {
+  position: relative;
+
   &--bg-gray {
     background-color: var(--basic-gray-lighter);
     padding: 40px var(--container-gap);
@@ -226,24 +231,13 @@
   }
 }
 
-.form__clearfix {
-  clear: both;
-
-  &::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-
-  @media (min-width: $tablet-view) {
-    display: none;
-  }
-}
-
 .form__legend {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   padding: 0;
-  float: right;
   width: 100%;
   line-height: 18px;
   margin: 0 auto 39px;
@@ -253,7 +247,10 @@
   }
 
   @media (min-width: $tablet-view) {
-    float: none;
+    position: static;
+    top: auto;
+    left: auto;
+    transform: translateX(0);
     width: auto;
     padding-left: 30px;
     padding-right: 30px;
@@ -326,10 +323,12 @@
 }
 
 .form__achievements {
+  padding-top: 114px;
   margin-bottom: -5px;
 
   @media (min-width: $tablet-view) {
     order: 0;
+    padding-top: 43px;
     padding-bottom: 49px;
     margin-bottom: 0;
   }
@@ -341,6 +340,7 @@
 }
 
 .form__app {
+  padding-top: 110px;
   margin-bottom: -2px;
 
   .form__legend {
@@ -352,7 +352,9 @@
   }
 
   @media (min-width: $tablet-view) {
+    padding-top: 43px;
     order: -2;
+    margin-bottom: 0;
   }
 
   @media (min-width: $desktop-view) {
@@ -364,18 +366,20 @@
 }
 
 .form__message {
-  margin-bottom: 10px;
+  padding-top: 36px;
+  margin-bottom: 7px;
 
   & .form__legend {
+    top: 0;
     margin: 0 auto 16px;
 
     @media (min-width: $tablet-view) {
+      top: auto;
       margin-bottom: 0;
     }
   }
 
   @media (min-width: $tablet-view) {
-    padding-top: 36px;
     padding-bottom: 52px;
 
     & .form__group {

@@ -20,7 +20,6 @@ block content
         input(type="text", placeholder="Ну и отчество тоже", name="form-third-name").form__input#form-third-name
     fieldset.form__fieldset.form__fieldset--bg-gray.form__achievements
       legend.form__legend Ваши безбашенные #[span достижения в путешествии]
-      .form__clearfix
       ul.checkbox-list
         li.checkbox-list__item
           input#your-achievements-1.checkbox.visually-hidden(type="checkbox", name="form-achievements-shark", checked)
@@ -42,7 +41,6 @@ block content
           label.form__checkbox-text(for="your-achievements-6") Разгромил отель
     fieldset.form__fieldset.form__contact-info
       legend.form__legend.tablet-view Контактная информация
-      .form__clearfix
       .form__group-wrap
         p.form__group.form__group--column-reverse.form__group--icon-phone
           label(for="form-phone").form__label Номер телефона
@@ -52,7 +50,6 @@ block content
           input(type="email", placeholder="Введите почту *", name="form-email", required).form__input#form-email
     fieldset.form__fieldset.form__fieldset--bg-gray.form__app
       legend.form__legend С каким приложением #[span путешествовали?]
-      .form__clearfix
       ul.radio-list
         li.radio-list__item
           input#your-app-1.radio.visually-hidden(type="radio", name="form-app", value="ios", checked)
@@ -65,7 +62,6 @@ block content
           label.form__checkbox-text(for="your-app-3") Windows Phone
     fieldset.form__fieldset.form__message
       legend.form__legend Опишите свои эмоции
-      .form__clearfix
       p.form__group
         label(for="form-message").visually-hidden Ваше сообщение
         textarea(name="form-message", placeholder="Можно прям в красках, не стесняясь в выражениях").form__input.form__input--textarea#form-message

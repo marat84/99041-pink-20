@@ -41,6 +41,7 @@
   width: var(--cell-width);
   position: relative;
   box-shadow: 0 1px 0 0.1px var(--basic-color);
+  z-index: 4;
 
   &::after {
     content: "";
@@ -99,6 +100,7 @@
   box-shadow: 0 0 0 1px var(--basic-gray-light), inset 0 0 0 1px var(--basic-gray-light);
   vertical-align: middle;
   padding: 15px 17px 15px 22px;
+  position: relative;
 
   &::before {
     content: attr(data-text);
@@ -133,6 +135,7 @@
 .tariff-table__hit {
   position: relative;
   overflow: hidden;
+  z-index: 2;
 
   &::before {
     content: "ХИТ";
@@ -188,13 +191,15 @@
 
 .tariff-table__icon {
   width: 31px;
-  float: right;
   display: inline-flex;
   justify-content: center;
   line-height: 0;
+  position: absolute;
+  right: 17px;
 
   @media (min-width: $tablet-view) {
-    float: none;
+    position: static;
+    right: auto;
   }
 }
 
